@@ -1,0 +1,69 @@
+=== Gravity Flow PDF Extension ===
+Contributors: stevehenty
+Tags: gravity forms, approvals, workflow
+Requires at least: 4.0
+Tested up to: 4.4.1
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+Create PDF files from entries in Gravity Flow.
+
+== Description ==
+
+Gravity Flow PDF Generator is an extension for Gravity Flow.
+
+Gravity Flow is an Add-On for [Gravity Forms](https://gravityflow.io/gravityforms)
+
+Facebook: [Steven Henty](https://www.facebook.com/gravityflow.io)
+
+= Requirements =
+
+1. [Purchase and install Gravity Forms](https://gravityflow.io/gravityforms)
+1. [Purchase and install Gravity Flow](https://gravityflow.io)
+1. Wordpress 4.2+
+1. Gravity Forms 1.9.4+
+1. Gravity Flow 1.1.0.4+
+
+
+= Support =
+If you find any that needs fixing, or if you have any ideas for improvements, please get in touch:
+https://gravityflow.io/contact/
+
+
+== Installation ==
+
+1.  Download the zipped file.
+1.  Extract and upload the contents of the folder to /wp-contents/plugins/ folder
+1.  Go to the Plugin management page of WordPress admin section and enable the 'Gravity Flow PDF Extension' plugin.
+
+== Frequently Asked Questions ==
+
+= Which license of Gravity Flow do I need? =
+The Gravity Flow PDF Generator Extension will work with any license of [Gravity Flow](https://gravityflow.io).
+
+
+== ChangeLog ==
+
+= 1.0.2 =
+- Fixed an issue with the plugin zip file size
+- Fixed an issue on the PDF feeds page where the Add New button is not available.
+
+= 1.0.1 =
+- Added the PDF templates form settings.
+- Added gravity_flow_pdf()->get_file_path and gravity_flow_pdf()->generate_pdf() to allow PDFs to be generated more easily from custom code.
+    Examples:
+    // Get the file path of the PDF (filtered by gravityflowpdf_file_path)
+	$filepath = gravity_flow_pdf()->get_file_path( $entry['id'] );
+	// Generate the PDF
+	gravity_flow_pdf()->generate_pdf( $body, $filepath );
+- Added the gravityflowpdf_file_path filter to allow the file path to be modified.
+    Example:
+    add_filter( 'gravityflowpdf_file_path', 'sh_gravityflowpdf_file_path', 10, 2 );
+    function sh_gravityflowpdf_file_path( $path, $entry_id ) {
+        return $path;
+    }
+- Added support for the {workflow_timeline} merge tag.
+- Fixed an issue with permissions.
+
+= 1.0 =
+All new!
