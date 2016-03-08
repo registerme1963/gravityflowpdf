@@ -41,7 +41,20 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			$template = $this->template;
 
 			$body = $this->replace_variables( $template, null );
-			$body = GFCommon::replace_variables( $body, $form, $entry );
+			$body = GFCommon::replace_variables( $body, $form, $entry, false, false, ! $this->template_disable_autoformat );
+
+			/**
+			 * Support processing shortcodes placed in the pdf template.
+			 *
+			 * @param bool $process_template_shortcodes Should shortcodes be processed. Default is true.
+			 * @param array $form The current form.
+			 * @param array $entry The current entry.
+			 * @param Gravity_Flow_Step_PDF $step The pdf step currently being processed.
+			 */
+			$process_template_shortcodes = apply_filters( 'gravityflowpdf_process_template_shortcodes', true, $form, $entry, $this );
+			if ( $process_template_shortcodes ) {
+				$body = do_shortcode( $body );
+			}
 
 			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id() );
 
@@ -84,12 +97,13 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			}
 
 			$notification['workflow_notification_type'] = 'workflow';
-			$notification['fromName'] = $this->workflow_notification_from_name;
-			$notification['from'] = $this->workflow_notification_from_email;
-			$notification['replyTo'] = $this->workflow_notification_reply_to;
-			$notification['bcc'] = $this->workflow_notification_bcc;
-			$notification['subject'] = $this->workflow_notification_subject;
-			$notification['message'] = $this->workflow_notification_message;
+			$notification['fromName']                   = $this->workflow_notification_from_name;
+			$notification['from']                       = $this->workflow_notification_from_email;
+			$notification['replyTo']                    = $this->workflow_notification_reply_to;
+			$notification['bcc']                        = $this->workflow_notification_bcc;
+			$notification['subject']                    = $this->workflow_notification_subject;
+			$notification['message']                    = $this->workflow_notification_message;
+			$notification['disableAutoformat']          = $this->workflow_notification_disable_autoformat;
 
 			$this->send_notifications( $assignees, $notification );
 

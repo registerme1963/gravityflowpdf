@@ -106,15 +106,29 @@ if ( class_exists( 'GFForms' ) ) {
 						'default_value' => '{all_fields}',
 					),
 					array(
+						'name'    => 'template_autoformat',
+						'label'   => '',
+						'type'    => 'checkbox',
+						'choices' => array(
+							array(
+								'label'         => __( 'Disable auto-formatting', 'gravityflowpdf' ),
+								'name'          => 'template_disable_autoformat',
+								'default_value' => false,
+								'tooltip'       => __( 'Disable auto-formatting to prevent paragraph breaks being automatically inserted when using HTML to create the PDF template.', 'gravityflowpdf' ),
+							),
+						),
+					),
+					array(
 						'name'    => 'workflow_notification_enabled',
 						'label'   => __( 'Send by email', 'gravityflowpdf' ),
-						'tooltip'   => __( 'Enable this setting to send the PDF by email as an attachment. The PDF will be deleted automatically from the server.', 'gravityflowpdf' ),
 						'type'    => 'checkbox',
 						'choices' => array(
 							array(
 								'label'         => __( 'Enabled', 'gravityflowpdf' ),
 								'name'          => 'workflow_notification_enabled',
 								'default_value' => false,
+								'tooltip'       => __( 'Enable this setting to send the PDF by email as an attachment. The PDF will be deleted automatically from the server.', 'gravityflowpdf' ),
+
 							),
 						),
 					),
@@ -180,6 +194,20 @@ if ( class_exists( 'GFForms' ) ) {
 						'type' => 'textarea',
 						'use_editor' => true,
 						'default_value' => __( 'The PDF for entry {entry_id} is attached.', 'gravityflowpdf' ),
+					),
+					array(
+						'name'    => 'workflow_notification_autoformat',
+						'label'   => '',
+						'type'    => 'checkbox',
+						'choices' => array(
+							array(
+								'label'         => __( 'Disable auto-formatting', 'gravityflowpdf' ),
+								'name'          => 'workflow_notification_disable_autoformat',
+								'default_value' => false,
+								'tooltip'       => __( 'Disable auto-formatting to prevent paragraph breaks being automatically inserted when using HTML to create the email message.', 'gravityflowpdf' ),
+
+							),
+						),
 					),
 				),
 			);
