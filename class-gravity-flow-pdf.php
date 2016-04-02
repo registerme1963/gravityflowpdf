@@ -427,11 +427,10 @@ deny from all';
 		}
 
 		public function settings_feed_condition_pdf( $field, $echo = true ) {
-			global $_entry_meta;
-			$_entry_meta = null;
+
 			$form = $this->get_current_form();
 			$form_id = absint( $form );
-			$entry_meta = GFFormsModel::get_entry_meta( $form_id );
+			$entry_meta = $this->get_all_entry_meta( $form_id );
 			$html = '<script>';
 			$html .= 'var entry_meta=' . GFCommon::json_encode( $entry_meta );
 			$html .= '</script>';
@@ -441,6 +440,29 @@ deny from all';
 				echo $html;
 			}
 			return $html;
+		}
+
+		public function get_all_entry_meta( $form_ids ) {
+			global $_entry_meta;
+
+
+			if ( $form_ids == 0 ) {
+				$form_ids = GFFormsModel::get_form_ids();
+			}
+
+			if ( ! is_array( $form_ids ) ) {
+				$form_ids = array( $form_ids );
+			}
+			$meta = array();
+			if ( ! isset( $_entry_meta ) ) {
+				$_entry_meta = array();
+			}
+			foreach ( $form_ids as $form_id ) {
+				$_entry_meta[ $form_id ] = apply_filters( 'gform_entry_meta', array(), $form_id );
+				$meta = array_merge( $meta, $_entry_meta[ $form_id ] );
+			}
+
+			return $meta;
 		}
 
 		public function action_gravityflow_workflow_complete( $entry_id, $form, $step_status ) {
