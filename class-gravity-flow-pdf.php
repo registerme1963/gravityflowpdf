@@ -405,6 +405,7 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$path = $folder .  $entry_id . '.pdf';
 			$path = apply_filters( 'gravityflowpdf_file_path', $path, $entry_id );
+
 			return  $path;
 		}
 
@@ -426,6 +427,8 @@ deny from all';
 		}
 
 		public function settings_feed_condition_pdf( $field, $echo = true ) {
+			global $_entry_meta;
+			$_entry_meta = null;
 			$form = $this->get_current_form();
 			$form_id = absint( $form );
 			$entry_meta = GFFormsModel::get_entry_meta( $form_id );

@@ -44,6 +44,9 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.0.4 =
+- Fixed an issue with the entry meta for some installations.
+
 = 1.0.3 =
 - Added the Disable auto-formatting setting pdf template and email message.
 - Added support for processing shortcodes in the pdf template. Return false to gravityflowpdf_process_template_shortcodes to disable processing.
