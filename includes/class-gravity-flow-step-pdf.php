@@ -25,7 +25,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			$this->generate_pdf();
 
 			$note = esc_html__( 'PDF Generated', 'gravityflow' );
-			$this->add_note( $note, 0, 'gravityflow' );
+			$this->add_note( $note, 0, $this->get_type() );
 
 			$this->send_email();
 
@@ -38,10 +38,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 			$form = $this->get_form();
 
-			$template = $this->template;
-
-			$body = $this->replace_variables( $template, null );
-			$body = GFCommon::replace_variables( $body, $form, $entry, false, false, ! $this->template_disable_autoformat );
+			$body = $this->template;
 
 			/**
 			 * Support processing shortcodes placed in the pdf template.
@@ -55,6 +52,9 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			if ( $process_template_shortcodes ) {
 				$body = do_shortcode( $body );
 			}
+
+			$body = $this->replace_variables( $body, null );
+			$body = GFCommon::replace_variables( $body, $form, $entry, false, false, ! $this->template_disable_autoformat );
 
 			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id() );
 
@@ -108,7 +108,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			$this->send_notifications( $assignees, $notification );
 
 			$note = esc_html__( 'Sent Notification: ', 'gravityflow' ) . $this->get_name();
-			$this->add_note( $note );
+			$this->add_note( $note, 0, $this->get_type() );
 
 			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id() );
 			@unlink( $file_path );

@@ -44,6 +44,12 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.0.5.1 =
+- Fixed an issue with the shortcode parsing.
+
+= 1.0.5 =
+- Fixed a warning when an entry doesn't exist.
+
 = 1.0.4 =
 - Fixed an issue with the entry meta for some installations.
 
