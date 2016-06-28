@@ -315,7 +315,7 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$entry = GFAPI::get_entry( $entry_id );
 
-			if ( empty( $entry ) ) {
+			if ( empty( $entry ) || is_wp_error( $entry ) ) {
 				die();
 			}
 
@@ -444,7 +444,6 @@ deny from all';
 
 		public function get_all_entry_meta( $form_ids ) {
 			global $_entry_meta;
-
 
 			if ( $form_ids == 0 ) {
 				$form_ids = GFFormsModel::get_form_ids();
