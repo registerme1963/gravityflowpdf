@@ -44,6 +44,29 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.0.6 =
+- Added the gravityflowpdf_content filter to allow the content to be modified just before generating the PDF.
+    Example:
+    add_filter( 'gravityflowpdf_content', 'gravityflow_filter_gravityflowpdf_content', 10, 2 );
+
+    /**
+     * Prevent the {all_fields} merge tag from shrinking all the text in the table for long tables.
+     *
+     * @param string $body
+     * @param string $file_path
+     *
+     * @return string
+     */
+    function gravityflow_filter_gravityflowpdf_content( $body, $file_path ) {
+    	//return $body;
+    	$body = str_replace( '<table width="99%" border="0" cellpadding="1" cellspacing="0" bgcolor="#EAEAEA"><tr><td>', '', $body );
+    	$body = str_replace( "</td>\r\n                   </tr>\r\n               </table>", '', $body );
+
+    	return $body;
+    }
+
+- Updated mPDF to 6.1
+
 = 1.0.5.1 =
 - Fixed an issue with the shortcode parsing.
 
