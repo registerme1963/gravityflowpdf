@@ -382,6 +382,8 @@ if ( class_exists( 'GFForms' ) ) {
 				return $file_path;
 			}
 
+			$mpdf = apply_filters( 'gravityflowpdf_mpdf', $mpdf, $body, $file_path );
+
 			$mpdf->WriteHTML( $body );
 
 			$mpdf->Output( $file_path );

@@ -44,6 +44,14 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.0.6.1 =
+- Added the gravityflowpdf_mpdf filter to allow the mPDF object to be modified just before the PDF is generated.
+    Example:
+    add_filter( 'gravityflowpdf_mpdf', 'gravityflow_filter_gravityflowpdf_mpdf', 10, 3 );
+    function gravityflow_filter_gravityflowpdf_mpdf( $mpdf, $body, $file_path ) {
+    	// modify $mpdf properties
+    	return $mpdf;
+    }
 = 1.0.6 =
 - Added the gravityflowpdf_content filter to allow the content to be modified just before generating the PDF.
     Example:
@@ -58,7 +66,6 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
      * @return string
      */
     function gravityflow_filter_gravityflowpdf_content( $body, $file_path ) {
-    	//return $body;
     	$body = str_replace( '<table width="99%" border="0" cellpadding="1" cellspacing="0" bgcolor="#EAEAEA"><tr><td>', '', $body );
     	$body = str_replace( "</td>\r\n                   </tr>\r\n               </table>", '', $body );
 
