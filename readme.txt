@@ -44,6 +44,9 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.0.6.2 =
+- Fixed an issue which prevented the Signature field image being displayed in the PDF when using the {all_fields} merge tag.
+
 = 1.0.6.1 =
 - Added the gravityflowpdf_mpdf filter to allow the mPDF object to be modified just before the PDF is generated.
     Example:

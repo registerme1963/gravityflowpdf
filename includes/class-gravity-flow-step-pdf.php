@@ -54,7 +54,10 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			}
 
 			$body = $this->replace_variables( $body, null );
+
+			add_filter( 'gform_merge_tag_filter', array( $this, 'maybe_filter_merge_tag' ), 11, 5 );
 			$body = GFCommon::replace_variables( $body, $form, $entry, false, false, ! $this->template_disable_autoformat );
+			remove_filter( 'gform_merge_tag_filter', array( $this, 'maybe_filter_merge_tag' ), 11 );
 
 			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id() );
 
@@ -134,6 +137,33 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 			GFCommon::send_notification( $notification, $form, $entry );
 
+		}
+
+		/**
+		 * Filter the all_fields merge tag output for the Signature field.
+		 *
+		 * The gf_signature page url does not work with mPDF; replace it with the path to the image instead.
+		 *
+		 * @param string $value The value of the field currently being processed.
+		 * @param string $merge_tag The merge tag (i.e. all_field) or the field/input ID when processing a merge tag for an individual field.
+		 * @param string $options The merge tag modifiers. e.g. "value,nohidden" would be the modifiers for {all_fields:value,nohidden}.
+		 * @param GF_Field $field The field currently being processed.
+		 * @param mixed $raw_field_value The fields raw value before it was processed by $field->get_value_entry_detail().
+		 *
+		 * @return string
+		 */
+		public function maybe_filter_merge_tag( $value, $merge_tag, $options, $field, $raw_field_value ) {
+			if ( $merge_tag == 'all_fields' && $field->type == 'signature' && ! empty( $raw_field_value ) ) {
+				$show_in_all_fields = apply_filters( 'gform_signature_show_in_all_fields', true, $field, $options, $value );
+				if ( $show_in_all_fields && function_exists( 'gf_signature' ) ) {
+					$find    = gf_signature()->get_signature_url( $raw_field_value );
+					$replace = GFFormsModel::get_upload_root() . 'signatures/' . $raw_field_value;
+
+					return str_replace( $find, $replace, $value );
+				}
+			}
+
+			return $value;
 		}
 	}
 
