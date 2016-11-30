@@ -44,6 +44,9 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.0.6.3 =
+- Fixed conditional shortcodes in the template failing conditional logic evaluation due to the merge tags not being replaced early enough.
+
 = 1.0.6.2 =
 - Fixed an issue which prevented the Signature field image being displayed in the PDF when using the {all_fields} merge tag.
 

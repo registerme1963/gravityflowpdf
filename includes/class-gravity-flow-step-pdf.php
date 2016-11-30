@@ -35,10 +35,14 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		function generate_pdf() {
 
 			$entry = $this->get_entry();
-
-			$form = $this->get_form();
+			$form  = $this->get_form();
 
 			$body = $this->template;
+			$body = $this->replace_variables( $body, null );
+
+			add_filter( 'gform_merge_tag_filter', array( $this, 'maybe_filter_merge_tag' ), 11, 5 );
+			$body = GFCommon::replace_variables( $body, $form, $entry, false, false, ! $this->template_disable_autoformat );
+			remove_filter( 'gform_merge_tag_filter', array( $this, 'maybe_filter_merge_tag' ), 11 );
 
 			/**
 			 * Support processing shortcodes placed in the pdf template.
@@ -52,12 +56,6 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			if ( $process_template_shortcodes ) {
 				$body = do_shortcode( $body );
 			}
-
-			$body = $this->replace_variables( $body, null );
-
-			add_filter( 'gform_merge_tag_filter', array( $this, 'maybe_filter_merge_tag' ), 11, 5 );
-			$body = GFCommon::replace_variables( $body, $form, $entry, false, false, ! $this->template_disable_autoformat );
-			remove_filter( 'gform_merge_tag_filter', array( $this, 'maybe_filter_merge_tag' ), 11 );
 
 			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id() );
 
