@@ -2,7 +2,7 @@
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
 Requires at least: 4.0
-Tested up to: 4.4.1
+Tested up to: 4.6.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,7 +14,7 @@ Gravity Flow PDF Generator is an extension for Gravity Flow.
 
 Gravity Flow is an Add-On for [Gravity Forms](https://gravityflow.io/gravityforms)
 
-Facebook: [Steven Henty](https://www.facebook.com/gravityflow.io)
+Facebook: [Gravity Flow](https://www.facebook.com/gravityflow.io)
 
 = Requirements =
 
@@ -43,6 +43,10 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 
 == ChangeLog ==
+
+= 1.0.6.4 =
+- Added Spanish translation.
+- Added Chinese translation.
 
 = 1.0.6.3 =
 - Fixed conditional shortcodes in the template failing conditional logic evaluation due to the merge tags not being replaced early enough.
