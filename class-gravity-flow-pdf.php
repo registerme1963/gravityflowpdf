@@ -371,7 +371,9 @@ if ( class_exists( 'GFForms' ) ) {
 		}
 
 		public function generate_pdf( $body, $file_path ) {
-			require_once( 'includes/mpdf/mpdf.php' );
+			if ( ! class_exists( 'mPDF' ) ) {
+				require_once( 'includes/mpdf/mpdf.php' );
+			}
 
 			$mpdf = new mPDF();
 			$mpdf->SetCreator( 'Gravity Flow v' . GRAVITY_FLOW_VERSION . '. https://gravityflow.io' );
