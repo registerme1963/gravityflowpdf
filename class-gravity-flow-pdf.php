@@ -378,11 +378,14 @@ if ( class_exists( 'GFForms' ) ) {
 			$mpdf = new mPDF();
 			$mpdf->SetCreator( 'Gravity Flow v' . GRAVITY_FLOW_VERSION . '. https://gravityflow.io' );
 
-			$body = apply_filters( 'gravityflowpdf_content', $body, $file_path );
-
 			if ( ! $mpdf || is_wp_error( $mpdf ) ) {
 				return $file_path;
 			}
+
+			$mpdf->autoScriptToLang = true;
+			$mpdf->autoLangToFont   = true;
+
+			$body = apply_filters( 'gravityflowpdf_content', $body, $file_path );
 
 			$mpdf = apply_filters( 'gravityflowpdf_mpdf', $mpdf, $body, $file_path );
 

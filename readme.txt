@@ -44,6 +44,9 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.0.6.7 =
+- Fixed an issue with the PDF when the content includes complex scripts such as Thai.
+
 = 1.0.6.6 =
 - Fixed PHP error when mPDF has already been included by another plugin.
 
