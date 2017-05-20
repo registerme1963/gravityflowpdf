@@ -338,9 +338,8 @@ if ( class_exists( 'GFForms' ) ) {
 				}
 			}
 
-			$name = 'form-' . $form_id . '-entry-' . $entry_id . '.pdf';
-
-			$file_path = $this->get_destination_folder() . $entry_id . '.pdf';
+			$name      = $this->get_file_name( $entry_id, $form_id );
+			$file_path = $this->get_file_path( $entry_id, $form_id );
 
 			$file = '';
 
@@ -412,14 +411,30 @@ if ( class_exists( 'GFForms' ) ) {
 			return $path;
 		}
 
-		public function get_file_path( $entry_id ) {
+		public function get_file_path( $entry_id, $form_id ) {
 
 			$folder = $this->get_destination_folder();
 
 			$path = $folder .  $entry_id . '.pdf';
-			$path = apply_filters( 'gravityflowpdf_file_path', $path, $entry_id );
+			$path = apply_filters( 'gravityflowpdf_file_path', $path, $entry_id, $form_id );
 
 			return  $path;
+		}
+
+		/**
+		 * Get the file name for the PDF download.
+		 *
+		 * @since 1.0.6.8
+		 *
+		 * @param int $entry_id The ID of the current entry.
+		 * @param int $form_id The ID of the current form.
+		 *
+		 * @return string
+		 */
+		public function get_file_name( $entry_id, $form_id ) {
+			$file_name = 'form-' . $form_id . '-entry-' . $entry_id . '.pdf';
+
+			return apply_filters( 'gravityflowpdf_file_name', $file_name, $entry_id, $form_id );
 		}
 
 		public static function maybe_create_htaccess_file( $path ) {

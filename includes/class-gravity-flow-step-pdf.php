@@ -57,7 +57,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 				$body = do_shortcode( $body );
 			}
 
-			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id() );
+			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $form['id'] );
 
 			gravity_flow_pdf()->generate_pdf( $body, $file_path );
 		}
@@ -111,7 +111,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			$note = esc_html__( 'Sent Notification: ', 'gravityflow' ) . $this->get_name();
 			$this->add_note( $note, 0, $this->get_type() );
 
-			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id() );
+			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $this->get_form_id() );
 			@unlink( $file_path );
 		}
 
@@ -121,7 +121,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 			$form = $this->get_form();
 
-			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id() );
+			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $form['id'] );
 
 			if ( ! isset( $notification['attachments'] ) ) {
 				$notification['attachments'] = array();
