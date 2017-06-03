@@ -44,6 +44,24 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.0.6.8 =
+- Added the gravityflowpdf_file_name filter to allow the file name used for the PDF download to be overridden.
+    Example:
+    add_filter( 'gravityflowpdf_file_name', 'filter_gravityflowpdf_file_name', 10, 3 );
+    function filter_gravityflowpdf_file_name( $file_name, $entry_id, $form_id ) {
+        return $file_name;
+    }
+- Updated the gravityflowpdf_file_path filter to include $form_id as the third parameter.
+
+= 1.0.6.7 =
+- Fixed an issue with the PDF when the content includes complex scripts such as Thai.
+
+= 1.0.6.6 =
+- Fixed PHP error when mPDF has already been included by another plugin.
+
+= 1.0.6.5 =
+- Updated mPDF to v6.1.3.
+
 = 1.0.6.4 =
 - Added Spanish translation.
 - Added Chinese translation.
