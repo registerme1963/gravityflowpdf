@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2016-11-16 16:48:52+00:00\n"
+"POT-Creation-Date: 2016-12-03 21:02:51+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Samuel Aguilera 🚀 <registros@samuelaguilera.com>, 2016\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/gravityflow/teams/50678/es_ES/)\n"
@@ -84,7 +84,7 @@ msgid ""
 "inserted when using HTML to create the PDF template."
 msgstr ""
 "Desactiva el auto formato para evitar que se añadan automáticamente saltos "
-"de página cuando uses HTML para crear la plantilla del PDF."
+"de párrafo cuando uses HTML para crear la plantilla del PDF."
 
 #: class-gravity-flow-pdf.php:123
 msgid "Send by email"
@@ -156,7 +156,7 @@ msgid ""
 "inserted when using HTML to create the email message."
 msgstr ""
 "Desactiva el auto formato para evitar que se añadan automáticamente saltos "
-"de página cuando uses HTML para crear el mensaje del email."
+"de párrafo cuando uses HTML para crear el mensaje del email."
 
 #: class-gravity-flow-pdf.php:515 class-gravity-flow-pdf.php:520
 msgid "PDF Templates"
@@ -182,7 +182,7 @@ msgstr "PDF"
 msgid "PDF Generated"
 msgstr "PDF generado"
 
-#: includes/class-gravity-flow-step-pdf.php:110
+#: includes/class-gravity-flow-step-pdf.php:111
 msgid "Sent Notification: "
 msgstr "Notificación enviada:"
 

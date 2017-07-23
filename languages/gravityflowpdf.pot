@@ -1,13 +1,13 @@
-# Copyright 2015-2016 Steven Henty.
+# Copyright 2015-2017 Steven Henty.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gravity Flow PDF Generator Extension 1.0.6.4\n"
+"Project-Id-Version: Gravity Flow PDF Generator Extension 1.1-dev\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2016-12-03 21:02:51+00:00\n"
+"POT-Creation-Date: 2017-07-23 19:52:08+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Steven Henty <support@gravityflow.io>\n"
 "Language-Team: Steven Henty <support@gravityflow.io>\n"
 "X-Generator: Gravity Flow Build Script\n"
@@ -25,7 +25,7 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 
 #: class-gravity-flow-pdf.php:66 class-gravity-flow-pdf.php:70
-#: class-gravity-flow-pdf.php:508
+#: class-gravity-flow-pdf.php:528
 msgid "Name"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Enter a name to uniquely identify this pdf."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:74 class-gravity-flow-pdf.php:509
+#: class-gravity-flow-pdf.php:74 class-gravity-flow-pdf.php:529
 msgid "Description"
 msgstr ""
 
@@ -150,19 +150,19 @@ msgid ""
 "inserted when using HTML to create the email message."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:515 class-gravity-flow-pdf.php:520
+#: class-gravity-flow-pdf.php:535 class-gravity-flow-pdf.php:540
 msgid "PDF Templates"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:520
+#: class-gravity-flow-pdf.php:540
 msgid "Add New"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:524
+#: class-gravity-flow-pdf.php:544
 msgid "PDF Template Settings"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:528
+#: class-gravity-flow-pdf.php:548
 msgid "You don't have any PDF templates configured."
 msgstr ""
 
