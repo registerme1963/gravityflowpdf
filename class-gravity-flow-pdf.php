@@ -77,8 +77,8 @@ if ( class_exists( 'GFForms' ) ) {
 
 		public function feed_settings_fields() {
 			$account_choices = gravity_flow()->get_users_as_choices();
-			$feed_settings = array(
-				'title' => 'Settings',
+			$feed_settings   = array(
+				'title'  => 'Settings',
 				'fields' => array(
 					array(
 						'name'     => 'name',
@@ -95,13 +95,22 @@ if ( class_exists( 'GFForms' ) ) {
 						'type'  => 'textarea',
 					),
 					array(
-						'name' => 'event',
-						'label' => __( 'Event', 'gravityflowpdf' ),
-						'type' => 'select',
+						'name'    => 'event',
+						'label'   => __( 'Event', 'gravityflowpdf' ),
+						'type'    => 'select',
 						'choices' => array(
-							array( 'label' => esc_html__( 'Workflow Complete', 'gravityflowpdf' ), 'value' => 'workflow_complete' ),
-							array( 'label' => esc_html__( 'Workflow Approved or rejected', 'gravityflowpdf' ), 'value' => 'Workflow: approved or rejected' ),
-							array( 'label' => esc_html__( 'Workflow User Input', 'gravityflowpdf' ), 'value' => 'Workflow: user input' ),
+							array(
+								'label' => esc_html__( 'Workflow Complete', 'gravityflowpdf' ),
+								'value' => 'workflow_complete'
+							),
+							array(
+								'label' => esc_html__( 'Workflow Approved or rejected', 'gravityflowpdf' ),
+								'value' => 'Workflow: approved or rejected'
+							),
+							array(
+								'label' => esc_html__( 'Workflow User Input', 'gravityflowpdf' ),
+								'value' => 'Workflow: user input'
+							),
 						),
 					),
 					array(
@@ -114,14 +123,14 @@ if ( class_exists( 'GFForms' ) ) {
 					),
 				),
 			);
-			$settings = array(
+			$settings        = array(
 				'title'  => 'PDF',
 				'fields' => array(
 					array(
-						'name' => 'template',
-						'label' => esc_html__( 'Template', 'gravityflowpdf' ),
-						'type' => 'textarea',
-						'use_editor' => true,
+						'name'          => 'template',
+						'label'         => esc_html__( 'Template', 'gravityflowpdf' ),
+						'type'          => 'textarea',
+						'use_editor'    => true,
 						'default_value' => '{all_fields}',
 					),
 					array(
@@ -152,20 +161,20 @@ if ( class_exists( 'GFForms' ) ) {
 						),
 					),
 					array(
-						'name'    => 'workflow_notification_type',
-						'label'   => __( 'Send To', 'gravityflowpdf' ),
-						'type'       => 'radio',
+						'name'          => 'workflow_notification_type',
+						'label'         => __( 'Send To', 'gravityflowpdf' ),
+						'type'          => 'radio',
 						'default_value' => 'select',
-						'horizontal' => true,
-						'choices'    => array(
+						'horizontal'    => true,
+						'choices'       => array(
 							array( 'label' => __( 'Select Users', 'gravityflowpdf' ), 'value' => 'select' ),
 							array( 'label' => __( 'Configure Routing', 'gravityflowpdf' ), 'value' => 'routing' ),
 						),
 					),
 					array(
 						'id'       => 'workflow_notification_users',
-						'name'    => 'workflow_notification_users[]',
-						'label'   => __( 'Select User', 'gravityflowpdf' ),
+						'name'     => 'workflow_notification_users[]',
+						'label'    => __( 'Select User', 'gravityflowpdf' ),
 						'size'     => '8',
 						'multiple' => 'multiple',
 						'type'     => 'select',
@@ -183,10 +192,10 @@ if ( class_exists( 'GFForms' ) ) {
 						'type'  => 'text',
 					),
 					array(
-						'name'  => 'workflow_notification_from_email',
-						'class' => 'fieldwidth-2 merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
-						'label' => __( 'From Email', 'gravityflowpdf' ),
-						'type'  => 'text',
+						'name'          => 'workflow_notification_from_email',
+						'class'         => 'fieldwidth-2 merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
+						'label'         => __( 'From Email', 'gravityflowpdf' ),
+						'type'          => 'text',
 						'default_value' => '{admin_email}',
 					),
 					array(
@@ -208,10 +217,10 @@ if ( class_exists( 'GFForms' ) ) {
 						'type'  => 'text',
 					),
 					array(
-						'name'  => 'workflow_notification_message',
-						'label' => __( 'Message', 'gravityflowpdf' ),
-						'type' => 'textarea',
-						'use_editor' => true,
+						'name'          => 'workflow_notification_message',
+						'label'         => __( 'Message', 'gravityflowpdf' ),
+						'type'          => 'textarea',
+						'use_editor'    => true,
 						'default_value' => __( 'The PDF for entry {entry_id} is attached.', 'gravityflowpdf' ),
 					),
 					array(
@@ -230,6 +239,7 @@ if ( class_exists( 'GFForms' ) ) {
 					),
 				),
 			);
+
 			return array( $feed_settings, $settings );
 		}
 
@@ -241,11 +251,13 @@ if ( class_exists( 'GFForms' ) ) {
 			if ( is_array( $form['fields'] ) ) {
 				foreach ( $form['fields'] as $field ) {
 					/* @var GF_Field $field */
-					$input_fields[] = array( 'key' => absint( $field->id ), 'text' => esc_html__( $field->get_field_label( false, null ) ) );
+					$input_fields[] = array( 'key'  => absint( $field->id ),
+					                         'text' => esc_html__( $field->get_field_label( false, null ) )
+					);
 				}
 			}
 
-			$users = is_admin() ? gravity_flow()->get_users_as_choices() : array();
+			$users   = is_admin() ? gravity_flow()->get_users_as_choices() : array();
 			$min     = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG || isset( $_GET['gform_debug'] ) ? '' : '.min';
 			$scripts = array(
 				array(
@@ -343,7 +355,7 @@ if ( class_exists( 'GFForms' ) ) {
 			if ( ! GFAPI::current_user_can_any( array( 'gravityforms_view_entries', 'gravityflow_status_view_all' ) ) ) {
 				// User doesn't have access to all entries
 				// See if the user has access to this entry because they're assigned to the current step.
-				$api = new Gravity_Flow_API( $form_id );
+				$api  = new Gravity_Flow_API( $form_id );
 				$step = $api->get_current_step( $entry );
 				if ( ! $step ) {
 					die();
@@ -410,23 +422,25 @@ if ( class_exists( 'GFForms' ) ) {
 			$mpdf->WriteHTML( $body );
 
 			$mpdf->Output( $file_path );
+
 			return $file_path;
 		}
 
 		function get_destination_folder() {
 			$upload_dir = wp_upload_dir();
-			$path = $upload_dir['basedir'] . DIRECTORY_SEPARATOR . 'gravityflowpdf' . DIRECTORY_SEPARATOR;
+			$path       = $upload_dir['basedir'] . DIRECTORY_SEPARATOR . 'gravityflowpdf' . DIRECTORY_SEPARATOR;
 			if ( ! is_dir( $path ) ) {
 				wp_mkdir_p( $path );
 			}
 			$this->maybe_create_htaccess_file( $path );
 			if ( is_multisite() ) {
 				$blog_id = get_current_blog_id();
-				$path .= $blog_id . DIRECTORY_SEPARATOR;
+				$path    .= $blog_id . DIRECTORY_SEPARATOR;
 				if ( ! is_dir( $path ) ) {
 					wp_mkdir_p( $path );
 				}
 			}
+
 			return $path;
 		}
 
@@ -434,10 +448,10 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$folder = $this->get_destination_folder();
 
-			$path = $folder .  $entry_id . '.pdf';
+			$path = $folder . $entry_id . '.pdf';
 			$path = apply_filters( 'gravityflowpdf_file_path', $path, $entry_id, $form_id );
 
-			return  $path;
+			return $path;
 		}
 
 		/**
@@ -446,7 +460,7 @@ if ( class_exists( 'GFForms' ) ) {
 		 * @since 1.0.6.8
 		 *
 		 * @param int $entry_id The ID of the current entry.
-		 * @param int $form_id The ID of the current form.
+		 * @param int $form_id  The ID of the current form.
 		 *
 		 * @return string
 		 */
@@ -461,7 +475,7 @@ if ( class_exists( 'GFForms' ) ) {
 			if ( file_exists( $htaccess_file ) ) {
 				return;
 			}
-			$txt= '# Disable access to files via Apache webservers.
+			$txt   = '# Disable access to files via Apache webservers.
 deny from all';
 			$rules = explode( "\n", $txt );
 
@@ -475,17 +489,18 @@ deny from all';
 
 		public function settings_feed_condition_pdf( $field, $echo = true ) {
 
-			$form = $this->get_current_form();
-			$form_id = absint( $form );
+			$form       = $this->get_current_form();
+			$form_id    = absint( $form );
 			$entry_meta = $this->get_all_entry_meta( $form_id );
-			$html = '<script>';
-			$html .= 'var entry_meta=' . GFCommon::json_encode( $entry_meta );
-			$html .= '</script>';
-			$html .= parent::settings_feed_condition( $field, false );
+			$html       = '<script>';
+			$html       .= 'var entry_meta=' . GFCommon::json_encode( $entry_meta );
+			$html       .= '</script>';
+			$html       .= parent::settings_feed_condition( $field, false );
 
 			if ( $echo ) {
 				echo $html;
 			}
+
 			return $html;
 		}
 
@@ -505,7 +520,7 @@ deny from all';
 			}
 			foreach ( $form_ids as $form_id ) {
 				$_entry_meta[ $form_id ] = apply_filters( 'gform_entry_meta', array(), $form_id );
-				$meta = array_merge( $meta, $_entry_meta[ $form_id ] );
+				$meta                    = array_merge( $meta, $_entry_meta[ $form_id ] );
 			}
 
 			return $meta;
@@ -544,7 +559,7 @@ deny from all';
 		 */
 		public function feed_list_columns() {
 			return array(
-				'name' => __( 'Name', 'gravityflowpdf' ),
+				'name'        => __( 'Name', 'gravityflowpdf' ),
 				'description' => __( 'Description', 'gravityflowpdf' ),
 			);
 		}
@@ -556,7 +571,8 @@ deny from all';
 
 			$url = add_query_arg( array( 'fid' => '0' ) );
 			$url = esc_url( $url );
-			return sprintf( esc_html__( 'PDF Templates', 'gravityforms' ), $this->get_short_title() ) . " <a class='add-new-h2' href='{$url}'>" . esc_html__( 'Add New' , 'gravityflowpdf' ) . '</a>';
+
+			return sprintf( esc_html__( 'PDF Templates', 'gravityforms' ), $this->get_short_title() ) . " <a class='add-new-h2' href='{$url}'>" . esc_html__( 'Add New', 'gravityflowpdf' ) . '</a>';
 		}
 
 		public function feed_settings_title() {
