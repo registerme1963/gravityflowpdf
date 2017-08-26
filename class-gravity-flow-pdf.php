@@ -56,6 +56,25 @@ if ( class_exists( 'GFForms' ) ) {
 			add_action( 'gravityflow_step_complete', array( $this, 'action_gravityflow_step_complete' ), 10, 5 );
 		}
 
+		/**
+		 * Add the extension capabilities to the Gravity Flow group in Members.
+		 *
+		 * @since 1.1-dev
+		 *
+		 * @param array $caps The capabilities and their human readable labels.
+		 *
+		 * @return array
+		 */
+		public function get_members_capabilities( $caps ) {
+			$prefix = $this->get_short_title() . ': ';
+
+			$caps['gravityflowpdf_settings']      = $prefix . __( 'Manage Settings', 'gravityflowpdf' );
+			$caps['gravityflowpdf_uninstall']     = $prefix . __( 'Uninstall', 'gravityflowpdf' );
+			$caps['gravityflowpdf_form_settings'] = $prefix . __( 'Manage Form Settings', 'gravityflowpdf' );
+
+			return $caps;
+		}
+
 		public function feed_settings_fields() {
 			$account_choices = gravity_flow()->get_users_as_choices();
 			$feed_settings = array(
