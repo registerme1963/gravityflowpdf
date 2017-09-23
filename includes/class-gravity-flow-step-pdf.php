@@ -22,7 +22,15 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 		function process() {
 
-			$this->generate_pdf();
+			try {
+				$this->generate_pdf();
+			} catch ( Exception $e ) {
+				gravity_flow()->log_error( __METHOD__ . '(): Unable to generate PDF. ' . $e->getMessage() );
+				$note = sprintf( esc_html__( 'Error: Unable to generate PDF. %s', 'gravityflowpdf' ), $e->getMessage() );
+				$this->add_note( $note );
+
+				return false;
+			}
 
 			$note = esc_html__( 'PDF Generated', 'gravityflow' );
 			$this->add_note( $note, 0, $this->get_type() );
