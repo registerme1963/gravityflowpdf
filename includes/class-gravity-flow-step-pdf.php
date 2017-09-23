@@ -6,7 +6,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		public $_step_type = 'pdf';
 
 		public function get_label() {
-			return esc_html__( 'PDF', 'gravityflow' );
+			return esc_html__( 'PDF', 'gravityflowpdf' );
 		}
 
 		public function get_icon_url() {
@@ -32,7 +32,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 				return false;
 			}
 
-			$note = esc_html__( 'PDF Generated', 'gravityflow' );
+			$note = esc_html__( 'PDF Generated', 'gravityflowpdf' );
 			$this->add_note( $note, 0, $this->get_type() );
 
 			$this->send_email();
@@ -116,7 +116,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 			$this->send_notifications( $assignees, $notification );
 
-			$note = esc_html__( 'Sent Notification: ', 'gravityflow' ) . $this->get_name();
+			$note = esc_html__( 'Sent Notification: ', 'gravityflowpdf' ) . $this->get_name();
 			$this->add_note( $note, 0, $this->get_type() );
 
 			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $this->get_form_id() );
