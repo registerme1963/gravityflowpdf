@@ -3,7 +3,7 @@
 Plugin Name: Gravity Flow PDF Generator Extension
 Plugin URI: http://gravityflow.io
 Description: PDF Generator Extension for Gravity Flow.
-Version: 1.1-dev
+Version: 1.1.1-dev
 Author: Steve Henty
 Author URI: http://www.stevenhenty.com
 License: GPL-3.0+
@@ -25,7 +25,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define( 'GRAVITY_FLOW_PDF_VERSION', '1.1-dev' );
+define( 'GRAVITY_FLOW_PDF_VERSION', '1.1.1-dev' );
 
 define( 'GRAVITY_FLOW_PDF_EDD_ITEM_NAME', 'PDF Generator' );
 

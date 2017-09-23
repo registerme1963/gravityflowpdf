@@ -6,7 +6,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		public $_step_type = 'pdf';
 
 		public function get_label() {
-			return esc_html__( 'PDF', 'gravityflow' );
+			return esc_html__( 'PDF', 'gravityflowpdf' );
 		}
 
 		public function get_icon_url() {
@@ -22,9 +22,17 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 		function process() {
 
-			$this->generate_pdf();
+			try {
+				$this->generate_pdf();
+			} catch ( Exception $e ) {
+				gravity_flow()->log_error( __METHOD__ . '(): Unable to generate PDF. ' . $e->getMessage() );
+				$note = sprintf( esc_html__( 'Error: Unable to generate PDF. %s', 'gravityflowpdf' ), $e->getMessage() );
+				$this->add_note( $note );
 
-			$note = esc_html__( 'PDF Generated', 'gravityflow' );
+				return false;
+			}
+
+			$note = esc_html__( 'PDF Generated', 'gravityflowpdf' );
 			$this->add_note( $note, 0, $this->get_type() );
 
 			$this->send_email();
@@ -108,7 +116,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 			$this->send_notifications( $assignees, $notification );
 
-			$note = esc_html__( 'Sent Notification: ', 'gravityflow' ) . $this->get_name();
+			$note = esc_html__( 'Sent Notification: ', 'gravityflowpdf' ) . $this->get_name();
 			$this->add_note( $note, 0, $this->get_type() );
 
 			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $this->get_form_id() );

@@ -1,12 +1,12 @@
-# Copyright 2015-2016 Steven Henty.
+# Copyright 2015-2017 Steven Henty.
 # Translators:
 # Samuel Aguilera 🚀 <registros@samuelaguilera.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2016-12-03 21:02:51+00:00\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2017-07-23 19:52:08+00:00\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Samuel Aguilera 🚀 <registros@samuelaguilera.com>, 2016\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/gravityflow/teams/50678/es_ES/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 
 #: class-gravity-flow-pdf.php:66 class-gravity-flow-pdf.php:70
-#: class-gravity-flow-pdf.php:508
+#: class-gravity-flow-pdf.php:528
 msgid "Name"
 msgstr "Nombre"
 
@@ -32,7 +32,7 @@ msgstr "Nombre"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Introduce un nombre único para identificar este PDF."
 
-#: class-gravity-flow-pdf.php:74 class-gravity-flow-pdf.php:509
+#: class-gravity-flow-pdf.php:74 class-gravity-flow-pdf.php:529
 msgid "Description"
 msgstr "Descripción"
 
@@ -158,19 +158,19 @@ msgstr ""
 "Desactiva el auto formato para evitar que se añadan automáticamente saltos "
 "de párrafo cuando uses HTML para crear el mensaje del email."
 
-#: class-gravity-flow-pdf.php:515 class-gravity-flow-pdf.php:520
+#: class-gravity-flow-pdf.php:535 class-gravity-flow-pdf.php:540
 msgid "PDF Templates"
 msgstr "Plantillas PDF"
 
-#: class-gravity-flow-pdf.php:520
+#: class-gravity-flow-pdf.php:540
 msgid "Add New"
 msgstr "Añadir nueva"
 
-#: class-gravity-flow-pdf.php:524
+#: class-gravity-flow-pdf.php:544
 msgid "PDF Template Settings"
 msgstr "Ajustes de plantilla PDF"
 
-#: class-gravity-flow-pdf.php:528
+#: class-gravity-flow-pdf.php:548
 msgid "You don't have any PDF templates configured."
 msgstr "No tienes ninguna plantilla de PDF configurada."
 

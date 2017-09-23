@@ -86,7 +86,7 @@ if ( class_exists( 'GFForms' ) ) {
 						'type'     => 'text',
 						'class'    => 'medium',
 						'required' => true,
-						'tooltip'  => '<h6>' . __( 'Name', 'gravityflow' ) . '</h6>' . __( 'Enter a name to uniquely identify this pdf.', 'gravityflowpdf' ),
+						'tooltip'  => '<h6>' . __( 'Name', 'gravityflowpdf' ) . '</h6>' . __( 'Enter a name to uniquely identify this pdf.', 'gravityflowpdf' ),
 					),
 					array(
 						'name'  => 'description',
