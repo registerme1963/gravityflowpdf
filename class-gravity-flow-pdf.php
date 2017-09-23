@@ -63,15 +63,15 @@ if ( class_exists( 'GFForms' ) ) {
 				'fields' => array(
 					array(
 						'name'     => 'name',
-						'label'    => __( 'Name', 'gravityflow' ),
+						'label'    => __( 'Name', 'gravityflowpdf' ),
 						'type'     => 'text',
 						'class'    => 'medium',
 						'required' => true,
-						'tooltip'  => '<h6>' . __( 'Name', 'gravityflow' ) . '</h6>' . __( 'Enter a name to uniquely identify this pdf.', 'gravityflow' ),
+						'tooltip'  => '<h6>' . __( 'Name', 'gravityflowpdf' ) . '</h6>' . __( 'Enter a name to uniquely identify this pdf.', 'gravityflowpdf' ),
 					),
 					array(
 						'name'  => 'description',
-						'label' => esc_html__( 'Description', 'gravityflow' ),
+						'label' => esc_html__( 'Description', 'gravityflowpdf' ),
 						'class' => 'fieldwidth-3 fieldheight-2',
 						'type'  => 'textarea',
 					),
@@ -90,8 +90,8 @@ if ( class_exists( 'GFForms' ) ) {
 						'tooltip'        => esc_html__( "Build the conditional logic that should be applied to this feed before it's allowed to be processed. If an entry does not meet the conditions of this step it will fall on to the next step in the list.", 'gravityflowpdf' ),
 						'label'          => 'Condition',
 						'type'           => 'feed_condition_pdf',
-						'checkbox_label' => esc_html__( 'Enable Condition', 'gravityflow' ),
-						'instructions'   => esc_html__( 'Use this PDF if', 'gravityflow' ),
+						'checkbox_label' => esc_html__( 'Enable Condition', 'gravityflowpdf' ),
+						'instructions'   => esc_html__( 'Use this PDF if', 'gravityflowpdf' ),
 					),
 				),
 			);
@@ -537,7 +537,7 @@ deny from all';
 
 			$url = add_query_arg( array( 'fid' => '0' ) );
 			$url = esc_url( $url );
-			return sprintf( esc_html__( 'PDF Templates', 'gravityforms' ), $this->get_short_title() ) . " <a class='add-new-h2' href='{$url}'>" . esc_html__( 'Add New' , 'gravityflowpdf' ) . '</a>';
+			return sprintf( esc_html__( 'PDF Templates', 'gravityflowpdf' ), $this->get_short_title() ) . " <a class='add-new-h2' href='{$url}'>" . esc_html__( 'Add New' , 'gravityflowpdf' ) . '</a>';
 		}
 
 		public function feed_settings_title() {
@@ -545,7 +545,7 @@ deny from all';
 		}
 
 		public function feed_list_no_item_message() {
-			return esc_html__( "You don't have any PDF templates configured.", 'gravityflow' );
+			return esc_html__( "You don't have any PDF templates configured.", 'gravityflowpdf' );
 		}
 	}
 }
