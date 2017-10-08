@@ -426,7 +426,7 @@ if ( class_exists( 'GFForms' ) ) {
 			}
 
 			/**
-			 * Allows the download authorization to be overriden. Only triggered for authenticated users and assignees.
+			 * Allows the download authorization to be overridden. Only triggered for authenticated users and assignees.
 			 *
 			 * @since 1.1.1
 			 *
