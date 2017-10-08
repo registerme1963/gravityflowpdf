@@ -344,30 +344,28 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$entry_id = $_REQUEST['gravityflow-pdf-entry-id'];
 
+			$entry_id = absint( $entry_id );
+
 			$entry = GFAPI::get_entry( $entry_id );
 
 			if ( empty( $entry ) || is_wp_error( $entry ) ) {
-				die();
+				$message = esc_html__( 'Entry not found.', 'gravityflow' );
+				wp_die( $message, $message, 404 );
+			}
+
+			$assignee_key = gravity_flow()->get_current_user_assignee_key();
+
+			if ( ! $assignee_key ) {
+				$message = esc_html__( 'Unauthorized.', 'gravityflow' );
+				wp_die( $message, $message, 401 );
+			}
+
+			if ( ! $this->is_download_authorized( $entry ) ) {
+				$message = esc_html__( "You don't have access to this PDF.", 'gravityflow' );
+				wp_die( $message, $message, 403 );
 			}
 
 			$form_id = $entry['form_id'];
-
-			if ( ! GFAPI::current_user_can_any( array( 'gravityforms_view_entries', 'gravityflow_status_view_all' ) ) ) {
-				// User doesn't have access to all entries
-				// See if the user has access to this entry because they're assigned to the current step.
-				$api  = new Gravity_Flow_API( $form_id );
-				$step = $api->get_current_step( $entry );
-				if ( ! $step ) {
-					die();
-				}
-				$user = wp_get_current_user();
-
-				$assignee = new Gravity_Flow_Assignee( 'user_id|' . $user->ID, $step );
-
-				if ( $assignee->get_status() !== 'pending' ) {
-					die();
-				}
-			}
 
 			$name      = $this->get_file_name( $entry_id, $form_id );
 			$file_path = $this->get_file_path( $entry_id, $form_id );
@@ -398,6 +396,38 @@ if ( class_exists( 'GFForms' ) ) {
 
 			echo $file;
 			exit;
+		}
+
+		public function is_download_authorized( $entry ){
+
+			$authorized = false;
+
+			if (  GFAPI::current_user_can_any( array( 'gravityforms_view_entries', 'gravityflow_status_view_all' ) ) ) {
+
+				$authorized = true;
+
+			} else {
+
+				// User doesn't have access to all entries
+
+				$assignee_key = gravity_flow()->get_current_user_assignee_key();
+
+				if ( $assignee_key ) {
+
+					$form_id = $entry['form_id'];
+
+					// See if the user has access because they're assigned to the current step.
+					$api  = new Gravity_Flow_API( $form_id );
+					$step = $api->get_current_step( $entry );
+					if ( $step && $step->is_assignee( $assignee_key ) ) {
+						$authorized = true;
+					}
+				}
+			}
+
+			$authorized = apply_filters( 'gravityflowpdf_download_authorized', $authorized, $entry );
+
+			return $authorized;
 		}
 
 		public function generate_pdf( $body, $file_path ) {
