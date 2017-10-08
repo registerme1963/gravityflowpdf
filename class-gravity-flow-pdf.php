@@ -425,6 +425,14 @@ if ( class_exists( 'GFForms' ) ) {
 				}
 			}
 
+			/**
+			 * Allows the download authorization to be overriden. Only triggered for authenticated users and assignees.
+			 *
+			 * @since 1.1.1
+			 *
+			 * @param bool $authorized
+			 * @param array $entry
+			 */
 			$authorized = apply_filters( 'gravityflowpdf_download_authorized', $authorized, $entry );
 
 			return $authorized;
