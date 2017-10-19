@@ -398,6 +398,11 @@ if ( class_exists( 'GFForms' ) ) {
 			exit;
 		}
 
+		/**
+		 * @param $entry
+		 *
+		 * @return bool|mixed|void
+		 */
 		public function is_download_authorized( $entry ){
 
 			$authorized = false;
