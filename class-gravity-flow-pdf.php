@@ -349,19 +349,19 @@ if ( class_exists( 'GFForms' ) ) {
 			$entry = GFAPI::get_entry( $entry_id );
 
 			if ( empty( $entry ) || is_wp_error( $entry ) ) {
-				$message = esc_html__( 'Entry not found.', 'gravityflow' );
+				$message = esc_html__( 'Entry not found.', 'gravityflowpdf' );
 				wp_die( $message, $message, 404 );
 			}
 
 			$assignee_key = gravity_flow()->get_current_user_assignee_key();
 
 			if ( ! $assignee_key ) {
-				$message = esc_html__( 'Unauthorized.', 'gravityflow' );
+				$message = esc_html__( 'Unauthorized.', 'gravityflowpdf' );
 				wp_die( $message, $message, 401 );
 			}
 
 			if ( ! $this->is_download_authorized( $entry ) ) {
-				$message = esc_html__( "You don't have access to this PDF.", 'gravityflow' );
+				$message = esc_html__( "You don't have access to this PDF.", 'gravityflowpdf' );
 				wp_die( $message, $message, 403 );
 			}
 
