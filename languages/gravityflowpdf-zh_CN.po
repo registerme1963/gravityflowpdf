@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-09-03 15:45:52+00:00\n"
+"POT-Creation-Date: 2017-09-27 12:05:40+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: michael edi <michaeledi@163.com>, 2016\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/gravityflow/teams/50678/zh_CN/)\n"
@@ -23,145 +23,157 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
-#: class-gravity-flow-pdf.php:66 class-gravity-flow-pdf.php:70
-#: class-gravity-flow-pdf.php:528
+#: class-gravity-flow-pdf.php:71
+msgid "Manage Settings"
+msgstr ""
+
+#: class-gravity-flow-pdf.php:72
+msgid "Uninstall"
+msgstr ""
+
+#: class-gravity-flow-pdf.php:73
+msgid "Manage Form Settings"
+msgstr ""
+
+#: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
+#: class-gravity-flow-pdf.php:562
 msgid "Name"
 msgstr "名称"
 
-#: class-gravity-flow-pdf.php:70
+#: class-gravity-flow-pdf.php:89
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "输入一个名称来唯一标识这个PDF步骤。"
 
-#: class-gravity-flow-pdf.php:74 class-gravity-flow-pdf.php:529
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:563
 msgid "Description"
 msgstr "描述"
 
-#: class-gravity-flow-pdf.php:80
+#: class-gravity-flow-pdf.php:99
 msgid "Event"
 msgstr "活动"
 
-#: class-gravity-flow-pdf.php:83
+#: class-gravity-flow-pdf.php:103
 msgid "Workflow Complete"
 msgstr "工作流程完成"
 
-#: class-gravity-flow-pdf.php:84
+#: class-gravity-flow-pdf.php:107
 msgid "Workflow Approved or rejected"
 msgstr "工作流程：已批准/已拒绝"
 
-#: class-gravity-flow-pdf.php:85
+#: class-gravity-flow-pdf.php:111
 msgid "Workflow User Input"
 msgstr "工作流程：用户输入"
 
-#: class-gravity-flow-pdf.php:90
+#: class-gravity-flow-pdf.php:118
 msgid ""
 "Build the conditional logic that should be applied to this feed before it's "
 "allowed to be processed. If an entry does not meet the conditions of this "
 "step it will fall on to the next step in the list."
 msgstr "建立条件逻辑，它将在步骤执行前被应用。如果条目不符合本步骤的条件，它将会跳转到列表中的下一个步骤。"
 
-#: class-gravity-flow-pdf.php:93
+#: class-gravity-flow-pdf.php:121
 msgid "Enable Condition"
 msgstr "启用这个步骤的条件逻辑"
 
-#: class-gravity-flow-pdf.php:94
+#: class-gravity-flow-pdf.php:122
 msgid "Use this PDF if"
 msgstr "使用这个PDF文件，当："
 
-#: class-gravity-flow-pdf.php:103
+#: class-gravity-flow-pdf.php:131
 msgid "Template"
 msgstr "模板"
 
-#: class-gravity-flow-pdf.php:114 class-gravity-flow-pdf.php:204
+#: class-gravity-flow-pdf.php:142 class-gravity-flow-pdf.php:232
 msgid "Disable auto-formatting"
 msgstr "禁用自动格式化"
 
-#: class-gravity-flow-pdf.php:117
+#: class-gravity-flow-pdf.php:145
 msgid ""
 "Disable auto-formatting to prevent paragraph breaks being automatically "
 "inserted when using HTML to create the PDF template."
 msgstr "禁用自动格式，以防止使用 HTML 创建的电子邮件时自动插入分段符。"
 
-#: class-gravity-flow-pdf.php:123
+#: class-gravity-flow-pdf.php:151
 msgid "Send by email"
 msgstr "条目被拒绝时发送电子邮件"
 
-#: class-gravity-flow-pdf.php:127
+#: class-gravity-flow-pdf.php:155
 msgid "Enabled"
 msgstr "已启用"
 
-#: class-gravity-flow-pdf.php:130
+#: class-gravity-flow-pdf.php:158
 msgid ""
 "Enable this setting to send the PDF by email as an attachment. The PDF will "
 "be deleted automatically from the server."
 msgstr "启用此设置将通过电子邮件以附件形式发送 PDF。然后该PDF文件将自动从服务器中被删除。"
 
-#: class-gravity-flow-pdf.php:137
+#: class-gravity-flow-pdf.php:165
 msgid "Send To"
 msgstr "发送至"
 
-#: class-gravity-flow-pdf.php:142
+#: class-gravity-flow-pdf.php:170
 msgid "Select Users"
 msgstr "用户"
 
-#: class-gravity-flow-pdf.php:143
+#: class-gravity-flow-pdf.php:171
 msgid "Configure Routing"
 msgstr "配置发送规则"
 
-#: class-gravity-flow-pdf.php:149
+#: class-gravity-flow-pdf.php:177
 msgid "Select User"
 msgstr "选择用户"
 
-#: class-gravity-flow-pdf.php:157
+#: class-gravity-flow-pdf.php:185
 msgid "Routing"
 msgstr "路由"
 
-#: class-gravity-flow-pdf.php:163
+#: class-gravity-flow-pdf.php:191
 msgid "From Name"
 msgstr "发件人名称"
 
-#: class-gravity-flow-pdf.php:169
+#: class-gravity-flow-pdf.php:197
 msgid "From Email"
 msgstr "发件人邮箱"
 
-#: class-gravity-flow-pdf.php:176
+#: class-gravity-flow-pdf.php:204
 msgid "Reply To"
 msgstr "回复给"
 
-#: class-gravity-flow-pdf.php:182
+#: class-gravity-flow-pdf.php:210
 msgid "BCC"
 msgstr "秘密抄送给"
 
-#: class-gravity-flow-pdf.php:188
+#: class-gravity-flow-pdf.php:216
 msgid "Subject"
 msgstr "主题"
 
-#: class-gravity-flow-pdf.php:193
+#: class-gravity-flow-pdf.php:221
 msgid "Message"
 msgstr "信息"
 
-#: class-gravity-flow-pdf.php:196
+#: class-gravity-flow-pdf.php:224
 msgid "The PDF for entry {entry_id} is attached."
 msgstr "条目{entry_id}的PDF文件将被生成附件。"
 
-#: class-gravity-flow-pdf.php:207
+#: class-gravity-flow-pdf.php:235
 msgid ""
 "Disable auto-formatting to prevent paragraph breaks being automatically "
 "inserted when using HTML to create the email message."
 msgstr "禁用自动格式，以防止使用 HTML 创建的电子邮件时自动插入分段符。"
 
-#: class-gravity-flow-pdf.php:535 class-gravity-flow-pdf.php:540
+#: class-gravity-flow-pdf.php:569 class-gravity-flow-pdf.php:575
 msgid "PDF Templates"
 msgstr "PDF 模板"
 
-#: class-gravity-flow-pdf.php:540
+#: class-gravity-flow-pdf.php:575
 msgid "Add New"
 msgstr "添加"
 
-#: class-gravity-flow-pdf.php:544
+#: class-gravity-flow-pdf.php:579
 msgid "PDF Template Settings"
 msgstr "PDF 模板设置"
 
-#: class-gravity-flow-pdf.php:548
+#: class-gravity-flow-pdf.php:583
 msgid "You don't have any PDF templates configured."
 msgstr "你没有配置任何PDF模板。"
 
@@ -169,11 +181,15 @@ msgstr "你没有配置任何PDF模板。"
 msgid "PDF"
 msgstr "PDF"
 
-#: includes/class-gravity-flow-step-pdf.php:27
+#: includes/class-gravity-flow-step-pdf.php:29
+msgid "Error: Unable to generate PDF. %s"
+msgstr ""
+
+#: includes/class-gravity-flow-step-pdf.php:35
 msgid "PDF Generated"
 msgstr "已生成的PDF"
 
-#: includes/class-gravity-flow-step-pdf.php:111
+#: includes/class-gravity-flow-step-pdf.php:119
 msgid "Sent Notification: "
 msgstr "已发送的通知 ︰"
 
@@ -183,7 +199,7 @@ msgstr "GravityFlow PDF生成器"
 
 #. Plugin URI of the plugin/theme
 msgid "http://gravityflow.io"
-msgstr "https://gravityflow.io"
+msgstr ""
 
 #. Description of the plugin/theme
 msgid "PDF Generator Extension for Gravity Flow."
@@ -191,8 +207,8 @@ msgstr "通过GravityFlow生成PDF文档。"
 
 #. Author of the plugin/theme
 msgid "Steve Henty"
-msgstr "Steven Henty"
+msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "http://www.stevenhenty.com"
-msgstr "http://www.stevenhenty.com"
+msgstr ""
