@@ -104,12 +104,12 @@ if ( class_exists( 'GFForms' ) ) {
 								'value' => 'workflow_complete'
 							),
 							array(
-								'label' => esc_html__( 'Workflow Approved or rejected', 'gravityflowpdf' ),
-								'value' => 'Workflow: approved or rejected'
+								'label' => esc_html__( 'Workflow Step Complete: Approval', 'gravityflowpdf' ),
+								'value' => 'workflow_step_complete_approval'
 							),
 							array(
-								'label' => esc_html__( 'Workflow User Input', 'gravityflowpdf' ),
-								'value' => 'Workflow: user input'
+								'label' => esc_html__( 'Workflow Step Complete: User Input', 'gravityflowpdf' ),
+								'value' => 'workflow_step_complete_user_input'
 							),
 						),
 					),
@@ -533,7 +533,7 @@ deny from all';
 		public function settings_feed_condition_pdf( $field, $echo = true ) {
 
 			$form       = $this->get_current_form();
-			$form_id    = absint( $form );
+			$form_id    = absint( $form['id'] );
 			$entry_meta = $this->get_all_entry_meta( $form_id );
 			$html       = '<script>';
 			$html       .= 'var entry_meta=' . GFCommon::json_encode( $entry_meta );
@@ -573,9 +573,21 @@ deny from all';
 			$this->process_pdf_feeds( $entry_id, $form, 'workflow_complete' );
 		}
 
+		/**
+		 * Callback for the gravityflow_step_complete action.
+		 *
+		 * Triggers the PDF templates for the Approval and User Input steps.
+		 *
+		 *
+		 * @param int $step_id
+		 * @param int $entry_id
+		 * @param int $form_id
+		 * @param string $status
+		 * @param Gravity_Flow_Step $step
+		 */
 		public function action_gravityflow_step_complete( $step_id, $entry_id, $form_id, $status, $step ) {
 			$form = GFAPI::get_form( $form_id );
-			$this->process_pdf_feeds( $entry_id, $form, 'workflow_step_complete' );
+			$this->process_pdf_feeds( $entry_id, $form, 'workflow_step_complete_' . $step->get_type() );
 		}
 
 		public function process_pdf_feeds( $entry_id, $form, $event = 'workflow_complete' ) {
