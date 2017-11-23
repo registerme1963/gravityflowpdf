@@ -296,11 +296,13 @@ if ( class_exists( 'GFForms' ) ) {
 					),
 					'version' => gravity_flow()->_version,
 					'enqueue' => array(
-						array( 'query' => 'page=gf_edit_forms&view=settings&subview=gravityflowpdf' ),
+						array( 'query' => 'page=gf_edit_forms&view=settings&subview=gravityflowpdf&fid=_notempty_' ),
+						array( 'query' => 'page=gf_edit_forms&view=settings&subview=gravityflowpdf&fid=0' ),
 					),
 					'strings' => array(
 						'feedId' => absint( rgget( 'fid' ) ),
 						'formId' => absint( rgget( 'id' ) ),
+						'mergeTagLabels' => gravity_flow()->get_form_settings_js_merge_tag_labels(),
 					),
 
 				),
@@ -335,6 +337,10 @@ if ( class_exists( 'GFForms' ) ) {
 			);
 
 			return array_merge( parent::styles(), $styles );
+		}
+
+		function settings_user_routing( $field ) {
+			return gravity_flow()->settings_user_routing( $field );
 		}
 
 		public function maybe_get_pdf() {
