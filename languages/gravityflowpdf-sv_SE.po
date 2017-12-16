@@ -1,14 +1,14 @@
 # Copyright 2015-2017 Steven Henty.
 # Translators:
 # FX Bénard <fxb@wp-translations.org>, 2017
-# Johan Yourstone <johan.yourstone@gmail.com>, 2017
+# Tor-Bjorn Fjellner <tobi@fjellner.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-09-27 12:05:40+00:00\n"
+"POT-Creation-Date: 2017-10-22 17:20:17+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Johan Yourstone <johan.yourstone@gmail.com>, 2017\n"
+"Last-Translator: Tor-Bjorn Fjellner <tobi@fjellner.com>, 2017\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/gravityflow/teams/50678/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -37,7 +37,7 @@ msgid "Manage Form Settings"
 msgstr "Hantera formulärinställningar"
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:562
+#: class-gravity-flow-pdf.php:605
 msgid "Name"
 msgstr "Namn"
 
@@ -45,7 +45,7 @@ msgstr "Namn"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Ange ett unikt namn för denna PDF."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:563
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:606
 msgid "Description"
 msgstr "Beskrivning"
 
@@ -171,19 +171,31 @@ msgstr ""
 "Stäng av automatisk formatering för att förhindra att överflödiga radbrott "
 "läggs in om du använder HTML för att skapa meddelandet."
 
-#: class-gravity-flow-pdf.php:569 class-gravity-flow-pdf.php:575
+#: class-gravity-flow-pdf.php:352
+msgid "Entry not found."
+msgstr "Ärendet kunde inte hittas."
+
+#: class-gravity-flow-pdf.php:359
+msgid "Unauthorized."
+msgstr "Behörighet saknas."
+
+#: class-gravity-flow-pdf.php:364
+msgid "You don't have access to this PDF."
+msgstr "Du saknar åtkomst till denna PDF."
+
+#: class-gravity-flow-pdf.php:612 class-gravity-flow-pdf.php:618
 msgid "PDF Templates"
 msgstr "PDF-mallar"
 
-#: class-gravity-flow-pdf.php:575
+#: class-gravity-flow-pdf.php:618
 msgid "Add New"
 msgstr "Lägg till nytt"
 
-#: class-gravity-flow-pdf.php:579
+#: class-gravity-flow-pdf.php:622
 msgid "PDF Template Settings"
 msgstr "Inställningar för PDF-mallar"
 
-#: class-gravity-flow-pdf.php:583
+#: class-gravity-flow-pdf.php:626
 msgid "You don't have any PDF templates configured."
 msgstr "Du har inte några PDF-mallar konfigurerade."
 
@@ -207,18 +219,14 @@ msgstr "Skickad notifiering:"
 msgid "Gravity Flow PDF Generator Extension"
 msgstr "Gravity Flow PDF Generator Extension"
 
-#. Plugin URI of the plugin/theme
-msgid "http://gravityflow.io"
-msgstr "http://gravityflow.io"
+#. Author URI of the plugin/theme
+msgid "https://gravityflow.io"
+msgstr "https://gravityflow.io"
 
 #. Description of the plugin/theme
 msgid "PDF Generator Extension for Gravity Flow."
 msgstr "Tillägg till Gravity Flow för generering av PDF"
 
 #. Author of the plugin/theme
-msgid "Steve Henty"
-msgstr "Steve Henty"
-
-#. Author URI of the plugin/theme
-msgid "http://www.stevenhenty.com"
-msgstr "http://www.stevenhenty.com"
+msgid "Gravity Flow"
+msgstr "Gravity Flow"

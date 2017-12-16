@@ -44,6 +44,14 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.1.1 =
+- Added support for email and role assignees of the current step to download the PDF.
+- Added the gravityflowpdf_download_authorized filter to allow the authorization to be overridden.
+- Updated Members 2.0 integration to use human readable labels for the capabilities. Requires Gravity Flow 1.8.1 or greater.
+- Fixed a fatal error which could occur if a required font is missing. A note is added to the workflow timeline indicating why the PDF could not be generated.
+- Fixed an issue with the PDF template conditional logic where the entry meta from a different form is displayed.
+- Fixed an issue with the PDF template Step Complete events where the template is not triggered. Requires templates to be re-saved with the correct event.
+
 = 1.1 =
 - Added the gravityflowpdf_file_name filter to allow the file name used for the PDF download to be overridden.
     Example:

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-09-27 12:05:40+00:00\n"
+"POT-Creation-Date: 2017-10-22 17:20:17+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Emre Erkan <kara+transifex@karalamalar.net>, 2017\n"
 "Language-Team: Turkish (Turkey) (https://www.transifex.com/gravityflow/teams/50678/tr_TR/)\n"
@@ -38,7 +38,7 @@ msgid "Manage Form Settings"
 msgstr "Form ayarlarını yönetin"
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:562
+#: class-gravity-flow-pdf.php:605
 msgid "Name"
 msgstr "İsim"
 
@@ -46,7 +46,7 @@ msgstr "İsim"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Bu pdf'i tanımlayacak eşsiz bir isim girin."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:563
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:606
 msgid "Description"
 msgstr "Açıklama"
 
@@ -172,19 +172,31 @@ msgstr ""
 "HTML e-posta iletisi oluştururken paragraf sonlarının eklenmesini engellemek"
 " için Otomatik Biçimlendirmeyi devre dışı bırakın."
 
-#: class-gravity-flow-pdf.php:569 class-gravity-flow-pdf.php:575
+#: class-gravity-flow-pdf.php:352
+msgid "Entry not found."
+msgstr "Girdi bulunamadı."
+
+#: class-gravity-flow-pdf.php:359
+msgid "Unauthorized."
+msgstr "Yetkilendirilmemiş."
+
+#: class-gravity-flow-pdf.php:364
+msgid "You don't have access to this PDF."
+msgstr "Bu PDF'e erişiminiz yok."
+
+#: class-gravity-flow-pdf.php:612 class-gravity-flow-pdf.php:618
 msgid "PDF Templates"
 msgstr "PDF şablonları"
 
-#: class-gravity-flow-pdf.php:575
+#: class-gravity-flow-pdf.php:618
 msgid "Add New"
 msgstr "Yeni Ekle"
 
-#: class-gravity-flow-pdf.php:579
+#: class-gravity-flow-pdf.php:622
 msgid "PDF Template Settings"
 msgstr "PDF şablon ayarları"
 
-#: class-gravity-flow-pdf.php:583
+#: class-gravity-flow-pdf.php:626
 msgid "You don't have any PDF templates configured."
 msgstr "Hiç ayarlanmış PDF şablonunuz bulunmuyor."
 
@@ -208,18 +220,14 @@ msgstr "Gönderilen bildirim:"
 msgid "Gravity Flow PDF Generator Extension"
 msgstr "Gravity Flow PDF oluşturucu eklentisi"
 
-#. Plugin URI of the plugin/theme
-msgid "http://gravityflow.io"
-msgstr ""
+#. Author URI of the plugin/theme
+msgid "https://gravityflow.io"
+msgstr "https://gravityflow.io"
 
 #. Description of the plugin/theme
 msgid "PDF Generator Extension for Gravity Flow."
 msgstr "Gravity Flow için PDF oluşturucu eklenti."
 
 #. Author of the plugin/theme
-msgid "Steve Henty"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://www.stevenhenty.com"
-msgstr ""
+msgid "Gravity Flow"
+msgstr "Gravity Flow"

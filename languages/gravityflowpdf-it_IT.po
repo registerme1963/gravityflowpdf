@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-09-27 12:05:40+00:00\n"
+"POT-Creation-Date: 2017-10-22 17:20:17+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: raffaella isidori <r.isidori@thesign.it>, 2017\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/gravityflow/teams/50678/it_IT/)\n"
@@ -37,7 +37,7 @@ msgid "Manage Form Settings"
 msgstr "Gestisci le impostazioni del modulo"
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:562
+#: class-gravity-flow-pdf.php:605
 msgid "Name"
 msgstr "Nome"
 
@@ -45,7 +45,7 @@ msgstr "Nome"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Inserisci un nome per identificare in modo univoco questo pdf."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:563
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:606
 msgid "Description"
 msgstr "Descrizione"
 
@@ -173,19 +173,31 @@ msgstr ""
 "Disabilita la formattazione automatica per evitare spazi fra i paragrafi che"
 " possono venire inseriti automaticamente mentre crei le email in HTML."
 
-#: class-gravity-flow-pdf.php:569 class-gravity-flow-pdf.php:575
+#: class-gravity-flow-pdf.php:352
+msgid "Entry not found."
+msgstr "La voce non è stata trovata."
+
+#: class-gravity-flow-pdf.php:359
+msgid "Unauthorized."
+msgstr "Non autorizzato."
+
+#: class-gravity-flow-pdf.php:364
+msgid "You don't have access to this PDF."
+msgstr "Non puoi accedere a questo PDF."
+
+#: class-gravity-flow-pdf.php:612 class-gravity-flow-pdf.php:618
 msgid "PDF Templates"
 msgstr "Template dei PDF"
 
-#: class-gravity-flow-pdf.php:575
+#: class-gravity-flow-pdf.php:618
 msgid "Add New"
 msgstr "Aggiungi nuovo"
 
-#: class-gravity-flow-pdf.php:579
+#: class-gravity-flow-pdf.php:622
 msgid "PDF Template Settings"
 msgstr "Impostazioni dei Template dei PDF"
 
-#: class-gravity-flow-pdf.php:583
+#: class-gravity-flow-pdf.php:626
 msgid "You don't have any PDF templates configured."
 msgstr "Non è stato configurato alcun template dei PDF."
 
@@ -209,18 +221,14 @@ msgstr "Notifica inviata:"
 msgid "Gravity Flow PDF Generator Extension"
 msgstr "Estensione PDF Generator di Gravity Flow"
 
-#. Plugin URI of the plugin/theme
-msgid "http://gravityflow.io"
-msgstr "http://gravityflow.io"
+#. Author URI of the plugin/theme
+msgid "https://gravityflow.io"
+msgstr "https://gravityflow.io"
 
 #. Description of the plugin/theme
 msgid "PDF Generator Extension for Gravity Flow."
 msgstr "Estensione PDF Generator di Gravity Flow"
 
 #. Author of the plugin/theme
-msgid "Steve Henty"
-msgstr "Steve Henty"
-
-#. Author URI of the plugin/theme
-msgid "http://www.stevenhenty.com"
-msgstr "http://www.stevenhenty.com"
+msgid "Gravity Flow"
+msgstr "Gravity Flow"

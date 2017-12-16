@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-09-27 12:05:40+00:00\n"
+"POT-Creation-Date: 2017-10-22 17:20:17+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FX Bénard <fxb@wp-translations.org>, 2017\n"
 "Language-Team: Russian (Russia) (https://www.transifex.com/gravityflow/teams/50678/ru_RU/)\n"
@@ -36,7 +36,7 @@ msgid "Manage Form Settings"
 msgstr ""
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:562
+#: class-gravity-flow-pdf.php:605
 msgid "Name"
 msgstr "Имя"
 
@@ -44,7 +44,7 @@ msgstr "Имя"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:563
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:606
 msgid "Description"
 msgstr "Описание"
 
@@ -164,19 +164,31 @@ msgstr ""
 "вставку разрывов при использовании HTML для создания сообщения электронной "
 "почты."
 
-#: class-gravity-flow-pdf.php:569 class-gravity-flow-pdf.php:575
+#: class-gravity-flow-pdf.php:352
+msgid "Entry not found."
+msgstr ""
+
+#: class-gravity-flow-pdf.php:359
+msgid "Unauthorized."
+msgstr ""
+
+#: class-gravity-flow-pdf.php:364
+msgid "You don't have access to this PDF."
+msgstr ""
+
+#: class-gravity-flow-pdf.php:612 class-gravity-flow-pdf.php:618
 msgid "PDF Templates"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:575
+#: class-gravity-flow-pdf.php:618
 msgid "Add New"
 msgstr "Добавить новый"
 
-#: class-gravity-flow-pdf.php:579
+#: class-gravity-flow-pdf.php:622
 msgid "PDF Template Settings"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:583
+#: class-gravity-flow-pdf.php:626
 msgid "You don't have any PDF templates configured."
 msgstr ""
 
@@ -200,8 +212,8 @@ msgstr "Уведомление об отправке:"
 msgid "Gravity Flow PDF Generator Extension"
 msgstr ""
 
-#. Plugin URI of the plugin/theme
-msgid "http://gravityflow.io"
+#. Author URI of the plugin/theme
+msgid "https://gravityflow.io"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -209,9 +221,5 @@ msgid "PDF Generator Extension for Gravity Flow."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Steve Henty"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://www.stevenhenty.com"
+msgid "Gravity Flow"
 msgstr ""
