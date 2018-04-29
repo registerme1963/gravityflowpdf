@@ -41,7 +41,8 @@ class Gravity_Flow_PDF_Bootstrap {
 
 		require_once( 'class-gravity-flow-pdf.php' );
 
-		new Gravity_Flow_PDF();
+		// Registers the class name with GFAddOn.
+		GFAddOn::register( 'Gravity_Flow_PDF' );
 	}
 }
 
