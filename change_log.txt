@@ -1,0 +1,1 @@
+- Fixed a JavaScript error on the PDF Template Settings page related to the assignee search enhancements in Gravity Flow 2.2+.
