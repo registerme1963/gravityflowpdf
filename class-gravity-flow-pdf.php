@@ -300,13 +300,20 @@ if ( class_exists( 'GFForms' ) ) {
 						array( 'query' => 'page=gf_edit_forms&view=settings&subview=gravityflowpdf&fid=0' ),
 					),
 					'strings' => array(
-						'feedId' => absint( rgget( 'fid' ) ),
-						'formId' => absint( rgget( 'id' ) ),
-						'mergeTagLabels' => gravity_flow()->get_form_settings_js_merge_tag_labels(),
+						'feedId'                    => absint( rgget( 'fid' ) ),
+						'formId'                    => absint( rgget( 'id' ) ),
+						'mergeTagLabels'            => gravity_flow()->get_form_settings_js_merge_tag_labels(),
+						'assigneeSearchPlaceholder' => esc_attr__( 'Type to search', 'gravityflowpdf' ),
 					),
 
 				),
-
+				array(
+					'handle'  => 'gravityflow_quicksearch',
+					'enqueue' => array(
+						array( 'query' => 'page=gf_edit_forms&view=settings&subview=gravityflowpdf&fid=_notempty_' ),
+						array( 'query' => 'page=gf_edit_forms&view=settings&subview=gravityflowpdf&fid=0' ),
+					),
+				),
 
 			);
 
