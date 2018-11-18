@@ -44,6 +44,9 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.1.2 =
+- Fixed a JavaScript error on the PDF Template Settings page related to the assignee search enhancements in Gravity Flow 2.2+.
+
 = 1.1.1 =
 - Added support for email and role assignees of the current step to download the PDF.
 - Added the gravityflowpdf_download_authorized filter to allow the authorization to be overridden.
