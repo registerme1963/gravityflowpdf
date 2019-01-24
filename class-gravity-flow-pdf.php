@@ -504,7 +504,7 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$folder = $this->get_destination_folder();
 
-			$path = $folder . $entry_id . '.pdf';
+			$path = $folder . $this->get_file_name( $entry_id, $form_id );
 			$path = apply_filters( 'gravityflowpdf_file_path', $path, $entry_id, $form_id );
 
 			return $path;

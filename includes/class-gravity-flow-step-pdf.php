@@ -81,14 +81,14 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			$notification_type = $this->workflow_notification_type;
 
 			switch ( $notification_type ) {
-				case 'select' :
+				case 'select':
 					if ( is_array( $this->workflow_notification_users ) ) {
 						foreach ( $this->workflow_notification_users as $assignee_key ) {
 							$assignees[] = new Gravity_Flow_Assignee( $assignee_key, $this );
 						}
 					}
 					break;
-				case 'routing' :
+				case 'routing':
 					$routings = $this->workflow_notification_routing;
 					if ( is_array( $routings ) ) {
 						foreach ( $routings as $routing ) {
