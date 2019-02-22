@@ -26,7 +26,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 define( 'GRAVITY_FLOW_PDF_VERSION', '1.1.3-dev' );
-
+define( 'GRAVITY_FLOW_PDF_EDD_ITEM_ID', '3373' );
 define( 'GRAVITY_FLOW_PDF_EDD_ITEM_NAME', 'PDF Generator' );
 
 add_action( 'gravityflow_loaded', array( 'Gravity_Flow_PDF_Bootstrap', 'load' ), 1 );
@@ -43,6 +43,10 @@ class Gravity_Flow_PDF_Bootstrap {
 
 		// Registers the class name with GFAddOn.
 		GFAddOn::register( 'Gravity_Flow_PDF' );
+
+		if ( defined( 'GRAVITY_FLOW_PDF_LICENSE_KEY' ) ) {
+			gravity_flow_pdf()->license_key = GRAVITY_FLOW_PDF_LICENSE_KEY;
+		}
 	}
 }
 
