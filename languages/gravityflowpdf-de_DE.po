@@ -1,17 +1,18 @@
 # Copyright 2015-2017 Steven Henty.
 # Translators:
 # FX Bénard <fxb@wp-translations.org>, 2017
-# Christian Herrmann <cherrmann@gmx.de>, 2017
+# Christian Herrmann, 2018
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-10-22 17:20:17+00:00\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Christian Herrmann <cherrmann@gmx.de>, 2017\n"
+"POT-Creation-Date: 2017-12-16 18:21:43+00:00\n"
+"PO-Revision-Date: 2016-11-16 18:40+0000\n"
+"Last-Translator: Christian Herrmann, 2018\n"
 "Language-Team: German (Germany) (https://www.transifex.com/gravityflow/teams/50678/de_DE/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -37,7 +38,7 @@ msgid "Manage Form Settings"
 msgstr "Formulareinstellungen verwalten"
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:605
+#: class-gravity-flow-pdf.php:623
 msgid "Name"
 msgstr "Name"
 
@@ -45,7 +46,7 @@ msgstr "Name"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Gib einen Namen ein, der dieses PDF eindeutig identifiziert."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:606
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:624
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -58,12 +59,12 @@ msgid "Workflow Complete"
 msgstr "Workflow abgeschlossen"
 
 #: class-gravity-flow-pdf.php:107
-msgid "Workflow Approved or rejected"
-msgstr "Workflow genehmigt oder zurückgewiesen"
+msgid "Workflow Step Complete: Approval"
+msgstr "Workflow Schritt abgeschlossen: Genehmigung"
 
 #: class-gravity-flow-pdf.php:111
-msgid "Workflow User Input"
-msgstr "Workflow Benutzereingabe"
+msgid "Workflow Step Complete: User Input"
+msgstr "Workflow Schritt abgeschlossen: Benutzereingabe"
 
 #: class-gravity-flow-pdf.php:118
 msgid ""
@@ -173,31 +174,31 @@ msgstr ""
 "Absatzumbrüchen zu verhindern, wenn die E-Mail-Nachricht in HTML erstellt "
 "wird."
 
-#: class-gravity-flow-pdf.php:352
+#: class-gravity-flow-pdf.php:358
 msgid "Entry not found."
 msgstr "Eintrag nicht gefunden."
 
-#: class-gravity-flow-pdf.php:359
+#: class-gravity-flow-pdf.php:365
 msgid "Unauthorized."
 msgstr "Nicht autorisiert."
 
-#: class-gravity-flow-pdf.php:364
+#: class-gravity-flow-pdf.php:370
 msgid "You don't have access to this PDF."
 msgstr "Du hast keinen Zugriff auf dieses PDF."
 
-#: class-gravity-flow-pdf.php:612 class-gravity-flow-pdf.php:618
+#: class-gravity-flow-pdf.php:630 class-gravity-flow-pdf.php:636
 msgid "PDF Templates"
 msgstr "PDF-Vorlagen"
 
-#: class-gravity-flow-pdf.php:618
+#: class-gravity-flow-pdf.php:636
 msgid "Add New"
 msgstr "Neu hinzufügen"
 
-#: class-gravity-flow-pdf.php:622
+#: class-gravity-flow-pdf.php:640
 msgid "PDF Template Settings"
 msgstr "PDF-Vorlagen-Einstellungen"
 
-#: class-gravity-flow-pdf.php:626
+#: class-gravity-flow-pdf.php:644
 msgid "You don't have any PDF templates configured."
 msgstr "Du hast keine PDF-Vorlagen konfiguriert."
 

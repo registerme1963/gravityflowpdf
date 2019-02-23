@@ -2,17 +2,18 @@
 # Translators:
 # FX Bénard <fxb@wp-translations.org>, 2017
 # Ecron <ecron_89@hotmail.com>, 2017
-# Xavi Ivars <xavi.ivars@gmail.com>, 2017
+# Xavi Ivars <xavi.ivars@gmail.com>, 2018
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-10-22 17:20:17+00:00\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Xavi Ivars <xavi.ivars@gmail.com>, 2017\n"
+"POT-Creation-Date: 2017-12-16 18:21:43+00:00\n"
+"PO-Revision-Date: 2016-11-16 18:40+0000\n"
+"Last-Translator: Xavi Ivars <xavi.ivars@gmail.com>, 2018\n"
 "Language-Team: Catalan (https://www.transifex.com/gravityflow/teams/50678/ca/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -38,7 +39,7 @@ msgid "Manage Form Settings"
 msgstr "Gestiona els paràmetres del formulari"
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:605
+#: class-gravity-flow-pdf.php:623
 msgid "Name"
 msgstr "Nom"
 
@@ -46,7 +47,7 @@ msgstr "Nom"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Introduïu un nom per a identificar unívocament aquest PDF."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:606
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:624
 msgid "Description"
 msgstr "Descripció"
 
@@ -59,12 +60,12 @@ msgid "Workflow Complete"
 msgstr "Flux de treball complet"
 
 #: class-gravity-flow-pdf.php:107
-msgid "Workflow Approved or rejected"
-msgstr "Flux de treball aprovat o rebutjat"
+msgid "Workflow Step Complete: Approval"
+msgstr "Pas del flux complet: Aprovació"
 
 #: class-gravity-flow-pdf.php:111
-msgid "Workflow User Input"
-msgstr "Entrada d'usuari del flux de treball"
+msgid "Workflow Step Complete: User Input"
+msgstr "Pas del flux complet: Entrada d'usuari"
 
 #: class-gravity-flow-pdf.php:118
 msgid ""
@@ -173,31 +174,31 @@ msgstr ""
 "Desactiveu el format automàtic per a previndre la introducció automàtica de "
 "salts de paràgraf quan utilitzeu HTML per a crear el cos del missatge."
 
-#: class-gravity-flow-pdf.php:352
+#: class-gravity-flow-pdf.php:358
 msgid "Entry not found."
 msgstr "No s'ha trobat l'entrada."
 
-#: class-gravity-flow-pdf.php:359
+#: class-gravity-flow-pdf.php:365
 msgid "Unauthorized."
 msgstr "No autoritzat"
 
-#: class-gravity-flow-pdf.php:364
+#: class-gravity-flow-pdf.php:370
 msgid "You don't have access to this PDF."
 msgstr "No teniu accés per accedir a aquest PDF."
 
-#: class-gravity-flow-pdf.php:612 class-gravity-flow-pdf.php:618
+#: class-gravity-flow-pdf.php:630 class-gravity-flow-pdf.php:636
 msgid "PDF Templates"
 msgstr "Plantilles PDF"
 
-#: class-gravity-flow-pdf.php:618
+#: class-gravity-flow-pdf.php:636
 msgid "Add New"
 msgstr "Afegeix"
 
-#: class-gravity-flow-pdf.php:622
+#: class-gravity-flow-pdf.php:640
 msgid "PDF Template Settings"
 msgstr "Paràmetres de les plantilles PDF"
 
-#: class-gravity-flow-pdf.php:626
+#: class-gravity-flow-pdf.php:644
 msgid "You don't have any PDF templates configured."
 msgstr "No heu configurat cap plantilla PDF."
 

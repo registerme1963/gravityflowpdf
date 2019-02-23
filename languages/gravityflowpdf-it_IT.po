@@ -1,17 +1,18 @@
 # Copyright 2015-2017 Steven Henty.
 # Translators:
 # FX Bénard <fxb@wp-translations.org>, 2017
-# raffaella isidori <r.isidori@thesign.it>, 2017
+# raffaella isidori <r.isidori@thesign.it>, 2018
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-10-22 17:20:17+00:00\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: raffaella isidori <r.isidori@thesign.it>, 2017\n"
+"POT-Creation-Date: 2017-12-16 18:21:43+00:00\n"
+"PO-Revision-Date: 2016-11-16 18:40+0000\n"
+"Last-Translator: raffaella isidori <r.isidori@thesign.it>, 2018\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/gravityflow/teams/50678/it_IT/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it_IT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -37,7 +38,7 @@ msgid "Manage Form Settings"
 msgstr "Gestisci le impostazioni del modulo"
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:605
+#: class-gravity-flow-pdf.php:623
 msgid "Name"
 msgstr "Nome"
 
@@ -45,7 +46,7 @@ msgstr "Nome"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Inserisci un nome per identificare in modo univoco questo pdf."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:606
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:624
 msgid "Description"
 msgstr "Descrizione"
 
@@ -58,12 +59,12 @@ msgid "Workflow Complete"
 msgstr "Il workflow è stato completato"
 
 #: class-gravity-flow-pdf.php:107
-msgid "Workflow Approved or rejected"
-msgstr "Il workflow è stato approvato o rifiutato"
+msgid "Workflow Step Complete: Approval"
+msgstr "Fase di completamento del workflow: approvazione"
 
 #: class-gravity-flow-pdf.php:111
-msgid "Workflow User Input"
-msgstr "Input dell'utente del workflow"
+msgid "Workflow Step Complete: User Input"
+msgstr "Fase di completamento del workflow: inserimento utente"
 
 #: class-gravity-flow-pdf.php:118
 msgid ""
@@ -173,31 +174,31 @@ msgstr ""
 "Disabilita la formattazione automatica per evitare spazi fra i paragrafi che"
 " possono venire inseriti automaticamente mentre crei le email in HTML."
 
-#: class-gravity-flow-pdf.php:352
+#: class-gravity-flow-pdf.php:358
 msgid "Entry not found."
 msgstr "La voce non è stata trovata."
 
-#: class-gravity-flow-pdf.php:359
+#: class-gravity-flow-pdf.php:365
 msgid "Unauthorized."
 msgstr "Non autorizzato."
 
-#: class-gravity-flow-pdf.php:364
+#: class-gravity-flow-pdf.php:370
 msgid "You don't have access to this PDF."
 msgstr "Non puoi accedere a questo PDF."
 
-#: class-gravity-flow-pdf.php:612 class-gravity-flow-pdf.php:618
+#: class-gravity-flow-pdf.php:630 class-gravity-flow-pdf.php:636
 msgid "PDF Templates"
 msgstr "Template dei PDF"
 
-#: class-gravity-flow-pdf.php:618
+#: class-gravity-flow-pdf.php:636
 msgid "Add New"
 msgstr "Aggiungi nuovo"
 
-#: class-gravity-flow-pdf.php:622
+#: class-gravity-flow-pdf.php:640
 msgid "PDF Template Settings"
 msgstr "Impostazioni dei Template dei PDF"
 
-#: class-gravity-flow-pdf.php:626
+#: class-gravity-flow-pdf.php:644
 msgid "You don't have any PDF templates configured."
 msgstr "Non è stato configurato alcun template dei PDF."
 
