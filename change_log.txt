@@ -1,1 +1,2 @@
+- Added support for the license key constant
 - Fixed an issue where pdf filename did not pass through the gravityflowpdf_file_name filter before creation.
