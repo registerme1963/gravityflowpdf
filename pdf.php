@@ -26,7 +26,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 define( 'GRAVITY_FLOW_PDF_VERSION', '1.1.3-dev' );
-define( 'GRAVITY_FLOW_PDF_EDD_ITEM_ID', '3373' );
+define( 'GRAVITY_FLOW_PDF_EDD_ITEM_ID', 3373 );
 define( 'GRAVITY_FLOW_PDF_EDD_ITEM_NAME', 'PDF Generator' );
 
 add_action( 'gravityflow_loaded', array( 'Gravity_Flow_PDF_Bootstrap', 'load' ), 1 );
@@ -67,15 +67,19 @@ function gravityflow_pdf_edd_plugin_updater() {
 
 	$gravity_flow_pdf = gravity_flow_pdf();
 	if ( $gravity_flow_pdf ) {
-		$settings = gravity_flow_pdf()->get_app_settings();
 
-		$license_key = trim( rgar( $settings, 'license_key' ) );
+		if ( defined( 'GRAVITY_FLOW_PDF_LICENSE_KEY' ) ) {
+			$license_key = GRAVITY_FLOW_PDF_LICENSE_KEY;
+		} else {
+			$settings = gravity_flow_pdf()->get_app_settings();
+			$license_key = trim( rgar( $settings, 'license_key' ) );
+		}
 
 		$edd_updater = new Gravity_Flow_EDD_SL_Plugin_Updater( GRAVITY_FLOW_EDD_STORE_URL, __FILE__, array(
 			'version'   => GRAVITY_FLOW_PDF_VERSION,
 			'license'   => $license_key,
-			'item_name' => GRAVITY_FLOW_PDF_EDD_ITEM_NAME,
-			'author'    => 'Steven Henty',
+			'item_id' => GRAVITY_FLOW_PDF_EDD_ITEM_ID,
+			'author'    => 'Gravity Flow',
 		) );
 	}
 
