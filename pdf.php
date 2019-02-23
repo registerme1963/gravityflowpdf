@@ -36,9 +36,6 @@ class Gravity_Flow_PDF_Bootstrap {
 	public static function load() {
 
 		require_once( 'includes/class-gravity-flow-step-pdf.php' );
-
-		Gravity_Flow_Steps::register( new Gravity_Flow_Step_PDF() );
-
 		require_once( 'class-gravity-flow-pdf.php' );
 
 		// Registers the class name with GFAddOn.
