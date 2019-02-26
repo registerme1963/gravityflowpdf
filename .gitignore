@@ -9,3 +9,4 @@ config-sample.json
 js/*.min.js
 css/*.min.css
 node_modules
+vendor/
