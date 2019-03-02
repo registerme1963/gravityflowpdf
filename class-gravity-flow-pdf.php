@@ -44,6 +44,31 @@ if ( class_exists( 'GFForms' ) ) {
 		private function __clone() {
 		} /* do nothing */
 
+		/**
+		 * The minimum requirements to use this extension.
+		 *
+		 * @since 1.x
+		 *
+		 * @return array
+		 */
+		public function minimum_requirements() {
+
+			return array(
+				'php' => array(
+					'version'   => '5.6',
+					'extensions' => array(
+						'curl',
+						'gd',
+						'mbstring',
+					),
+					'functions' => array(
+						'mb_substr',
+						'mb_regex_encoding',
+					),
+				),
+			);
+
+		}
 
 		public function __construct() {
 			parent::__construct();
@@ -456,20 +481,41 @@ if ( class_exists( 'GFForms' ) ) {
 			return $authorized;
 		}
 
+		/**
+		 * @param string $body The PDF content.
+		 * @param string $file_path The PDF path.
+		 *
+		 * @return string
+		 * @throws \Mpdf\MpdfException
+		 */
 		public function generate_pdf( $body, $file_path ) {
-			if ( ! class_exists( 'mPDF' ) ) {
-				require_once( 'includes/mpdf/mpdf.php' );
+			if ( ! class_exists( '\Mpdf\Mpdf' ) ) {
+				require_once( 'vendor/autoload.php' );
 			}
 
-			$mpdf = new mPDF();
-			$mpdf->SetCreator( 'Gravity Flow v' . GRAVITY_FLOW_VERSION . '. https://gravityflow.io' );
+			$mpdf_config = array(
+				'fontDir'          => array( $this->get_base_path() . '/includes/fonts/' ),
+				'tempDir'          => $this->get_tmp_path(),
+				'autoScriptToLang' => true,
+				'autoLangToFont'   => true,
+			);
 
-			if ( ! $mpdf || is_wp_error( $mpdf ) ) {
+			/**
+			 * Allow the mPDF initialization properties to be overridden.
+			 *
+			 * @since 1.x
+			 *
+			 * @param array $mpdf_config The mPDF initialization properties. See https://mpdf.github.io/reference/mpdf-variables/overview.html
+			 */
+			$mpdf_config = apply_filters( 'gravityflowpdf_mpdf_config', $mpdf_config );
+
+			$mpdf = new \Mpdf\Mpdf( $mpdf_config );
+
+			if ( ! $mpdf ) {
 				return $file_path;
 			}
 
-			$mpdf->autoScriptToLang = true;
-			$mpdf->autoLangToFont   = true;
+			$mpdf->SetCreator( 'Gravity Flow v' . GRAVITY_FLOW_VERSION . '. https://gravityflow.io' );
 
 			$body = apply_filters( 'gravityflowpdf_content', $body, $file_path );
 
@@ -480,6 +526,23 @@ if ( class_exists( 'GFForms' ) ) {
 			$mpdf->Output( $file_path );
 
 			return $file_path;
+		}
+
+		/**
+		 * Returns the path to the tmp directory to be used by mPDF.
+		 *
+		 * @since 1.x
+		 * 
+		 * @return string
+		 */
+		public function get_tmp_path() {
+			$path = $this->get_destination_folder() . 'tmp' . DIRECTORY_SEPARATOR;
+
+			if ( ! is_dir( $path ) ) {
+				wp_mkdir_p( $path );
+			}
+
+			return $path;
 		}
 
 		function get_destination_folder() {
@@ -604,6 +667,11 @@ deny from all';
 		}
 
 		public function process_pdf_feeds( $entry_id, $form, $event = 'workflow_complete' ) {
+			$meets_requirements = $this->meets_minimum_requirements();
+			if ( ! $meets_requirements['meets_requirements'] ) {
+				return;
+			}
+
 			$entry = GFAPI::get_entry( $entry_id );
 			$feeds = $this->get_active_feeds( $form['id'] );
 			foreach ( $feeds as $feed ) {

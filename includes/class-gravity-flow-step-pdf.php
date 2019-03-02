@@ -13,6 +13,40 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			return plugins_url( 'images/pdf.svg' ,'gravityflowpdf/pdf.php' );
 		}
 
+		/**
+		 * Determines if this step is supported on this server.
+		 *
+		 * @since 1.x
+		 *
+		 * @return bool
+		 */
+		public function is_supported() {
+			$is_supported       = true;
+			$meets_requirements = gravity_flow_pdf()->meets_minimum_requirements();
+			if ( ! $meets_requirements['meets_requirements'] ) {
+				$is_supported = false;
+			}
+
+			return $is_supported;
+		}
+
+		/**
+		 * Ensures active steps are not processed when not supported.
+		 *
+		 * @since 1.x
+		 *
+		 * @return bool
+		 */
+		public function is_active() {
+			$is_active = parent::is_active();
+
+			if ( $is_active && ! $this->is_supported() ) {
+				$is_active = false;
+			}
+
+			return $is_active;
+		}
+
 		public function get_settings() {
 
 			$settings = gravity_flow_pdf()->feed_settings_fields();
