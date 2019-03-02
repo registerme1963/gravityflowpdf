@@ -23,6 +23,12 @@ class Tests_Gravity_Flow_PDF extends GF_UnitTestCase {
 		$this->assertDirectoryExists( $path );
 	}
 
+	public function test_get_tmp_path() {
+		$path = $this->add_on->get_tmp_path();
+		$this->assertNotEmpty( $path );
+		$this->assertDirectoryExists( $path );
+	}
+
 	public function test_get_file_name() {
 		$entry_id = 1;
 		$form_id  = 2;
