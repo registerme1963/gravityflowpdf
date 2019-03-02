@@ -45,7 +45,7 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 == ChangeLog ==
 
 = 1.2 =
-- Added support for the license key constant
+- Added support for the license key constant GRAVITY_FLOW_PDF_LICENSE_KEY.
 - Fixed an issue where pdf filename did not pass through the gravityflowpdf_file_name filter before creation.
 - Updated mPDF to version 7.1.
 - Updated minimum PHP requirements to PHP5.6.
