@@ -1,4 +1,4 @@
-# Copyright 2015-2017 Steven Henty.
+# Copyright 2015-2019 Steven Henty.
 # Translators:
 # FX Bénard <fxb@wp-translations.org>, 2017
 # Ecron <ecron_89@hotmail.com>, 2017
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-12-16 18:21:43+00:00\n"
+"POT-Creation-Date: 2019-02-23 09:11:47+00:00\n"
 "PO-Revision-Date: 2016-11-16 18:40+0000\n"
 "Last-Translator: Xavi Ivars <xavi.ivars@gmail.com>, 2018\n"
 "Language-Team: Catalan (https://www.transifex.com/gravityflow/teams/50678/ca/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gravity Flow Build Script\n"
+"X-Generator: grunt-wp-i18n1.0.2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-Country: United States\n"
@@ -39,7 +39,7 @@ msgid "Manage Form Settings"
 msgstr "Gestiona els paràmetres del formulari"
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:623
+#: class-gravity-flow-pdf.php:630
 msgid "Name"
 msgstr "Nom"
 
@@ -47,7 +47,7 @@ msgstr "Nom"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Introduïu un nom per a identificar unívocament aquest PDF."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:624
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:631
 msgid "Description"
 msgstr "Descripció"
 
@@ -174,31 +174,35 @@ msgstr ""
 "Desactiveu el format automàtic per a previndre la introducció automàtica de "
 "salts de paràgraf quan utilitzeu HTML per a crear el cos del missatge."
 
-#: class-gravity-flow-pdf.php:358
+#: class-gravity-flow-pdf.php:306
+msgid "Type to search"
+msgstr ""
+
+#: class-gravity-flow-pdf.php:365
 msgid "Entry not found."
 msgstr "No s'ha trobat l'entrada."
 
-#: class-gravity-flow-pdf.php:365
+#: class-gravity-flow-pdf.php:372
 msgid "Unauthorized."
 msgstr "No autoritzat"
 
-#: class-gravity-flow-pdf.php:370
+#: class-gravity-flow-pdf.php:377
 msgid "You don't have access to this PDF."
 msgstr "No teniu accés per accedir a aquest PDF."
 
-#: class-gravity-flow-pdf.php:630 class-gravity-flow-pdf.php:636
+#: class-gravity-flow-pdf.php:637 class-gravity-flow-pdf.php:643
 msgid "PDF Templates"
 msgstr "Plantilles PDF"
 
-#: class-gravity-flow-pdf.php:636
+#: class-gravity-flow-pdf.php:643
 msgid "Add New"
 msgstr "Afegeix"
 
-#: class-gravity-flow-pdf.php:640
+#: class-gravity-flow-pdf.php:647
 msgid "PDF Template Settings"
 msgstr "Paràmetres de les plantilles PDF"
 
-#: class-gravity-flow-pdf.php:644
+#: class-gravity-flow-pdf.php:651
 msgid "You don't have any PDF templates configured."
 msgstr "No heu configurat cap plantilla PDF."
 

@@ -1,4 +1,4 @@
-# Copyright 2015-2017 Steven Henty.
+# Copyright 2015-2019 Steven Henty.
 # Translators:
 # Edi Weigh <michaeledi@163.com>, 2016
 # 
@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-12-16 18:21:43+00:00\n"
+"POT-Creation-Date: 2019-02-23 09:11:47+00:00\n"
 "PO-Revision-Date: 2016-11-16 18:40+0000\n"
 "Last-Translator: Edi Weigh <michaeledi@163.com>, 2016\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/gravityflow/teams/50678/zh_CN/)\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gravity Flow Build Script\n"
+"X-Generator: grunt-wp-i18n1.0.2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-Country: United States\n"
@@ -37,7 +37,7 @@ msgid "Manage Form Settings"
 msgstr ""
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:623
+#: class-gravity-flow-pdf.php:630
 msgid "Name"
 msgstr "名称"
 
@@ -45,7 +45,7 @@ msgstr "名称"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "输入一个名称来唯一标识这个PDF步骤。"
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:624
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:631
 msgid "Description"
 msgstr "描述"
 
@@ -162,31 +162,35 @@ msgid ""
 "inserted when using HTML to create the email message."
 msgstr "禁用自动格式，以防止使用 HTML 创建的电子邮件时自动插入分段符。"
 
-#: class-gravity-flow-pdf.php:358
-msgid "Entry not found."
+#: class-gravity-flow-pdf.php:306
+msgid "Type to search"
 msgstr ""
 
 #: class-gravity-flow-pdf.php:365
+msgid "Entry not found."
+msgstr ""
+
+#: class-gravity-flow-pdf.php:372
 msgid "Unauthorized."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:370
+#: class-gravity-flow-pdf.php:377
 msgid "You don't have access to this PDF."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:630 class-gravity-flow-pdf.php:636
+#: class-gravity-flow-pdf.php:637 class-gravity-flow-pdf.php:643
 msgid "PDF Templates"
 msgstr "PDF 模板"
 
-#: class-gravity-flow-pdf.php:636
+#: class-gravity-flow-pdf.php:643
 msgid "Add New"
 msgstr "添加"
 
-#: class-gravity-flow-pdf.php:640
+#: class-gravity-flow-pdf.php:647
 msgid "PDF Template Settings"
 msgstr "PDF 模板设置"
 
-#: class-gravity-flow-pdf.php:644
+#: class-gravity-flow-pdf.php:651
 msgid "You don't have any PDF templates configured."
 msgstr "你没有配置任何PDF模板。"
 

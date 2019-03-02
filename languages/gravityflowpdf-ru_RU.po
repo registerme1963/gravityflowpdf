@@ -1,4 +1,4 @@
-# Copyright 2015-2017 Steven Henty.
+# Copyright 2015-2019 Steven Henty.
 # Translators:
 # FX Bénard <fxb@wp-translations.org>, 2017
 # 
@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-12-16 18:21:43+00:00\n"
+"POT-Creation-Date: 2019-02-23 09:11:47+00:00\n"
 "PO-Revision-Date: 2016-11-16 18:40+0000\n"
 "Last-Translator: FX Bénard <fxb@wp-translations.org>, 2017\n"
 "Language-Team: Russian (Russia) (https://www.transifex.com/gravityflow/teams/50678/ru_RU/)\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Gravity Flow Build Script\n"
+"X-Generator: grunt-wp-i18n1.0.2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-Country: United States\n"
@@ -37,7 +37,7 @@ msgid "Manage Form Settings"
 msgstr ""
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:623
+#: class-gravity-flow-pdf.php:630
 msgid "Name"
 msgstr "Имя"
 
@@ -45,7 +45,7 @@ msgstr "Имя"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:624
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:631
 msgid "Description"
 msgstr "Описание"
 
@@ -165,31 +165,35 @@ msgstr ""
 "вставку разрывов при использовании HTML для создания сообщения электронной "
 "почты."
 
-#: class-gravity-flow-pdf.php:358
-msgid "Entry not found."
+#: class-gravity-flow-pdf.php:306
+msgid "Type to search"
 msgstr ""
 
 #: class-gravity-flow-pdf.php:365
+msgid "Entry not found."
+msgstr ""
+
+#: class-gravity-flow-pdf.php:372
 msgid "Unauthorized."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:370
+#: class-gravity-flow-pdf.php:377
 msgid "You don't have access to this PDF."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:630 class-gravity-flow-pdf.php:636
+#: class-gravity-flow-pdf.php:637 class-gravity-flow-pdf.php:643
 msgid "PDF Templates"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:636
+#: class-gravity-flow-pdf.php:643
 msgid "Add New"
 msgstr "Добавить новый"
 
-#: class-gravity-flow-pdf.php:640
+#: class-gravity-flow-pdf.php:647
 msgid "PDF Template Settings"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:644
+#: class-gravity-flow-pdf.php:651
 msgid "You don't have any PDF templates configured."
 msgstr ""
 
