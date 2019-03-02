@@ -2,9 +2,9 @@
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
 Requires at least: 4.0
-Tested up to: 4.6.1
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tested up to: 5.1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Create PDF files from entries in Gravity Flow.
 
@@ -21,8 +21,8 @@ Facebook: [Gravity Flow](https://www.facebook.com/gravityflow.io)
 1. [Purchase and install Gravity Forms](https://gravityflow.io/gravityforms)
 1. [Purchase and install Gravity Flow](https://gravityflow.io)
 1. Wordpress 4.2+
-1. Gravity Forms 1.9.4+
-1. Gravity Flow 1.1.0.4+
+1. Gravity Forms Latest version
+1. Gravity Flow latest version
 
 
 = Support =
@@ -43,6 +43,12 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 
 == ChangeLog ==
+
+= 1.2 =
+- Added support for the license key constant
+- Fixed an issue where pdf filename did not pass through the gravityflowpdf_file_name filter before creation.
+- Updated mPDF to version 7.1.
+- Updated minimum PHP requirements to PHP5.6.
 
 = 1.1.2 =
 - Fixed a JavaScript error on the PDF Template Settings page related to the assignee search enhancements in Gravity Flow 2.2+.

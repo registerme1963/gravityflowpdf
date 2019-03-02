@@ -47,7 +47,7 @@ if ( class_exists( 'GFForms' ) ) {
 		/**
 		 * The minimum requirements to use this extension.
 		 *
-		 * @since 1.x
+		 * @since 1.2
 		 *
 		 * @return array
 		 */

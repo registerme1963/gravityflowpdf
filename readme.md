@@ -32,4 +32,4 @@ https://www.transifex.com/projects/p/gravityflow/
 
 
 
-Copyright 2015 Steven Henty
+Copyright 2015-2019 Steven Henty S.L.
