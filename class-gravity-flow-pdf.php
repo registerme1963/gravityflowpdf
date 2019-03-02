@@ -718,5 +718,23 @@ deny from all';
 		public function feed_list_no_item_message() {
 			return esc_html__( "You don't have any PDF templates configured.", 'gravityflowpdf' );
 		}
+
+		/**
+		 * Returns the physical path of the plugins root folder.
+		 *
+		 * @since 1.x
+		 *
+		 * @param string $full_path
+		 *
+		 * @return string
+		 */
+		public function get_base_path( $full_path = '' ) {
+			if ( empty( $full_path ) ) {
+				$full_path = $this->_full_path;
+			}
+
+			return dirname( $full_path );
+		}
+
 	}
 }
