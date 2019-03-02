@@ -1,4 +1,4 @@
-# Copyright 2015-2017 Steven Henty.
+# Copyright 2015-2019 Steven Henty.
 # Translators:
 # FX Bénard <fxb@wp-translations.org>, 2017
 # Jose Manuel Cardoso Freitas <josefreitas2@gmail.com>, 2018
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2017-12-16 18:21:43+00:00\n"
+"POT-Creation-Date: 2019-02-23 09:11:47+00:00\n"
 "PO-Revision-Date: 2016-11-16 18:40+0000\n"
 "Last-Translator: Álvaro Góis dos Santos <alvarogois@ovni.org>, 2018\n"
 "Language-Team: Portuguese (Portugal) (https://www.transifex.com/gravityflow/teams/50678/pt_PT/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gravity Flow Build Script\n"
+"X-Generator: grunt-wp-i18n1.0.2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-Country: United States\n"
@@ -39,7 +39,7 @@ msgid "Manage Form Settings"
 msgstr "Gerir definições do formulário"
 
 #: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:623
+#: class-gravity-flow-pdf.php:630
 msgid "Name"
 msgstr "Nome"
 
@@ -47,7 +47,7 @@ msgstr "Nome"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Introduzir um nome único para este PDF."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:624
+#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:631
 msgid "Description"
 msgstr "Descrição"
 
@@ -173,31 +173,35 @@ msgstr ""
 "Desactive a formatação automática. Evita que as quebras de parágrafos sejam "
 "inseridas automaticamente quando usar HTML para criar a sua mensagem."
 
-#: class-gravity-flow-pdf.php:358
+#: class-gravity-flow-pdf.php:306
+msgid "Type to search"
+msgstr ""
+
+#: class-gravity-flow-pdf.php:365
 msgid "Entry not found."
 msgstr "Registo não encontrado."
 
-#: class-gravity-flow-pdf.php:365
+#: class-gravity-flow-pdf.php:372
 msgid "Unauthorized."
 msgstr "Não autorizado."
 
-#: class-gravity-flow-pdf.php:370
+#: class-gravity-flow-pdf.php:377
 msgid "You don't have access to this PDF."
 msgstr "Não tem acesso a este PDF."
 
-#: class-gravity-flow-pdf.php:630 class-gravity-flow-pdf.php:636
+#: class-gravity-flow-pdf.php:637 class-gravity-flow-pdf.php:643
 msgid "PDF Templates"
 msgstr "Modelos de PDF"
 
-#: class-gravity-flow-pdf.php:636
+#: class-gravity-flow-pdf.php:643
 msgid "Add New"
 msgstr "Adicionar novo"
 
-#: class-gravity-flow-pdf.php:640
+#: class-gravity-flow-pdf.php:647
 msgid "PDF Template Settings"
 msgstr "Definições dos modelos de PDF"
 
-#: class-gravity-flow-pdf.php:644
+#: class-gravity-flow-pdf.php:651
 msgid "You don't have any PDF templates configured."
 msgstr "Não tem nenhum modelo de PDF configurado."
 
