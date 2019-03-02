@@ -720,11 +720,11 @@ deny from all';
 		}
 
 		/**
-		 * Returns the physical path of the plugins root folder.
+		 * Returns the physical path of the add-on root folder.
 		 *
 		 * @since 1.x
 		 *
-		 * @param string $full_path
+		 * @param string $full_path The full path.
 		 *
 		 * @return string
 		 */
