@@ -503,7 +503,7 @@ if ( class_exists( 'GFForms' ) ) {
 			/**
 			 * Allow the mPDF initialization properties to be overridden.
 			 *
-			 * @since 1.x
+			 * @since 1.1.3
 			 *
 			 * @param array $mpdf_config The mPDF initialization properties. See https://mpdf.github.io/reference/mpdf-variables/overview.html
 			 */
@@ -531,7 +531,7 @@ if ( class_exists( 'GFForms' ) ) {
 		/**
 		 * Returns the path to the tmp directory to be used by mPDF.
 		 *
-		 * @since 1.x
+		 * @since 1.1.3
 		 * 
 		 * @return string
 		 */
