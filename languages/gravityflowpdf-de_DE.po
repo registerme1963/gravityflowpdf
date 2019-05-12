@@ -1,15 +1,15 @@
 # Copyright 2015-2019 Steven Henty.
 # Translators:
-# FX Bénard <fxb@wp-translations.org>, 2017
 # Christian Herrmann, 2018
+# FX Bénard <fxb@wp-translations.org>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-02-23 09:11:47+00:00\n"
+"POT-Creation-Date: 2019-03-02 20:34:10+00:00\n"
 "PO-Revision-Date: 2016-11-16 18:40+0000\n"
-"Last-Translator: Christian Herrmann, 2018\n"
+"Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
 "Language-Team: German (Germany) (https://www.transifex.com/gravityflow/teams/50678/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,48 +25,48 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
-#: class-gravity-flow-pdf.php:71
+#: class-gravity-flow-pdf.php:96
 msgid "Manage Settings"
 msgstr "Einstellungen verwalten"
 
-#: class-gravity-flow-pdf.php:72
+#: class-gravity-flow-pdf.php:97
 msgid "Uninstall"
 msgstr "Deinstallieren"
 
-#: class-gravity-flow-pdf.php:73
+#: class-gravity-flow-pdf.php:98
 msgid "Manage Form Settings"
 msgstr "Formulareinstellungen verwalten"
 
-#: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:630
+#: class-gravity-flow-pdf.php:110 class-gravity-flow-pdf.php:114
+#: class-gravity-flow-pdf.php:698
 msgid "Name"
 msgstr "Name"
 
-#: class-gravity-flow-pdf.php:89
+#: class-gravity-flow-pdf.php:114
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Gib einen Namen ein, der dieses PDF eindeutig identifiziert."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:631
+#: class-gravity-flow-pdf.php:118 class-gravity-flow-pdf.php:699
 msgid "Description"
 msgstr "Beschreibung"
 
-#: class-gravity-flow-pdf.php:99
+#: class-gravity-flow-pdf.php:124
 msgid "Event"
 msgstr "Ereignis"
 
-#: class-gravity-flow-pdf.php:103
+#: class-gravity-flow-pdf.php:128
 msgid "Workflow Complete"
 msgstr "Workflow abgeschlossen"
 
-#: class-gravity-flow-pdf.php:107
+#: class-gravity-flow-pdf.php:132
 msgid "Workflow Step Complete: Approval"
 msgstr "Workflow Schritt abgeschlossen: Genehmigung"
 
-#: class-gravity-flow-pdf.php:111
+#: class-gravity-flow-pdf.php:136
 msgid "Workflow Step Complete: User Input"
 msgstr "Workflow Schritt abgeschlossen: Benutzereingabe"
 
-#: class-gravity-flow-pdf.php:118
+#: class-gravity-flow-pdf.php:143
 msgid ""
 "Build the conditional logic that should be applied to this feed before it's "
 "allowed to be processed. If an entry does not meet the conditions of this "
@@ -76,23 +76,23 @@ msgstr ""
 "er bearbeitet werden darf. Falls ein Eintrag nicht den Bedingungen dieses "
 "Schritts entspricht, wird er beim nächsten Schritt in der Liste scheitern."
 
-#: class-gravity-flow-pdf.php:121
+#: class-gravity-flow-pdf.php:146
 msgid "Enable Condition"
 msgstr "Bedingung aktivieren"
 
-#: class-gravity-flow-pdf.php:122
+#: class-gravity-flow-pdf.php:147
 msgid "Use this PDF if"
 msgstr "Benutze dieses PDF, falls"
 
-#: class-gravity-flow-pdf.php:131
+#: class-gravity-flow-pdf.php:156
 msgid "Template"
 msgstr "Vorlage"
 
-#: class-gravity-flow-pdf.php:142 class-gravity-flow-pdf.php:232
+#: class-gravity-flow-pdf.php:167 class-gravity-flow-pdf.php:257
 msgid "Disable auto-formatting"
 msgstr "Automatische Formatierung deaktivieren"
 
-#: class-gravity-flow-pdf.php:145
+#: class-gravity-flow-pdf.php:170
 msgid ""
 "Disable auto-formatting to prevent paragraph breaks being automatically "
 "inserted when using HTML to create the PDF template."
@@ -101,15 +101,15 @@ msgstr ""
 "Absatzumbrüchen zu verhindern, wenn HTML benutzt wird, um eine PDF-Vorlage "
 "zu erstellen."
 
-#: class-gravity-flow-pdf.php:151
+#: class-gravity-flow-pdf.php:176
 msgid "Send by email"
 msgstr "Per E-Mail senden"
 
-#: class-gravity-flow-pdf.php:155
+#: class-gravity-flow-pdf.php:180
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: class-gravity-flow-pdf.php:158
+#: class-gravity-flow-pdf.php:183
 msgid ""
 "Enable this setting to send the PDF by email as an attachment. The PDF will "
 "be deleted automatically from the server."
@@ -117,55 +117,55 @@ msgstr ""
 "Diese Einstellung aktivieren, um das PDF als Anhang per E-Mail zu senden. "
 "Das PDF wird automatisch vom Server gelöscht."
 
-#: class-gravity-flow-pdf.php:165
+#: class-gravity-flow-pdf.php:190
 msgid "Send To"
 msgstr "Senden an"
 
-#: class-gravity-flow-pdf.php:170
+#: class-gravity-flow-pdf.php:195
 msgid "Select Users"
 msgstr "Benutzer auswählen"
 
-#: class-gravity-flow-pdf.php:171
+#: class-gravity-flow-pdf.php:196
 msgid "Configure Routing"
 msgstr "Routing konfigurieren"
 
-#: class-gravity-flow-pdf.php:177
+#: class-gravity-flow-pdf.php:202
 msgid "Select User"
 msgstr "Benutzer auswählen"
 
-#: class-gravity-flow-pdf.php:185
+#: class-gravity-flow-pdf.php:210
 msgid "Routing"
 msgstr "Routing"
 
-#: class-gravity-flow-pdf.php:191
+#: class-gravity-flow-pdf.php:216
 msgid "From Name"
 msgstr "Absender-Name"
 
-#: class-gravity-flow-pdf.php:197
+#: class-gravity-flow-pdf.php:222
 msgid "From Email"
 msgstr "Absender-E-Mail"
 
-#: class-gravity-flow-pdf.php:204
+#: class-gravity-flow-pdf.php:229
 msgid "Reply To"
 msgstr "Antwort an"
 
-#: class-gravity-flow-pdf.php:210
+#: class-gravity-flow-pdf.php:235
 msgid "BCC"
 msgstr "BCC"
 
-#: class-gravity-flow-pdf.php:216
+#: class-gravity-flow-pdf.php:241
 msgid "Subject"
 msgstr "Betreff"
 
-#: class-gravity-flow-pdf.php:221
+#: class-gravity-flow-pdf.php:246
 msgid "Message"
 msgstr "Nachricht"
 
-#: class-gravity-flow-pdf.php:224
+#: class-gravity-flow-pdf.php:249
 msgid "The PDF for entry {entry_id} is attached."
 msgstr "Das PDF für Eintrag {entry_id} ist angehängt."
 
-#: class-gravity-flow-pdf.php:235
+#: class-gravity-flow-pdf.php:260
 msgid ""
 "Disable auto-formatting to prevent paragraph breaks being automatically "
 "inserted when using HTML to create the email message."
@@ -174,35 +174,35 @@ msgstr ""
 "Absatzumbrüchen zu verhindern, wenn die E-Mail-Nachricht in HTML erstellt "
 "wird."
 
-#: class-gravity-flow-pdf.php:306
+#: class-gravity-flow-pdf.php:331
 msgid "Type to search"
-msgstr ""
+msgstr "Tippen, um zu suchen"
 
-#: class-gravity-flow-pdf.php:365
+#: class-gravity-flow-pdf.php:390
 msgid "Entry not found."
 msgstr "Eintrag nicht gefunden."
 
-#: class-gravity-flow-pdf.php:372
+#: class-gravity-flow-pdf.php:397
 msgid "Unauthorized."
 msgstr "Nicht autorisiert."
 
-#: class-gravity-flow-pdf.php:377
+#: class-gravity-flow-pdf.php:402
 msgid "You don't have access to this PDF."
 msgstr "Du hast keinen Zugriff auf dieses PDF."
 
-#: class-gravity-flow-pdf.php:637 class-gravity-flow-pdf.php:643
+#: class-gravity-flow-pdf.php:705 class-gravity-flow-pdf.php:711
 msgid "PDF Templates"
 msgstr "PDF-Vorlagen"
 
-#: class-gravity-flow-pdf.php:643
+#: class-gravity-flow-pdf.php:711
 msgid "Add New"
 msgstr "Neu hinzufügen"
 
-#: class-gravity-flow-pdf.php:647
+#: class-gravity-flow-pdf.php:715
 msgid "PDF Template Settings"
 msgstr "PDF-Vorlagen-Einstellungen"
 
-#: class-gravity-flow-pdf.php:651
+#: class-gravity-flow-pdf.php:719
 msgid "You don't have any PDF templates configured."
 msgstr "Du hast keine PDF-Vorlagen konfiguriert."
 
@@ -210,15 +210,15 @@ msgstr "Du hast keine PDF-Vorlagen konfiguriert."
 msgid "PDF"
 msgstr "PDF"
 
-#: includes/class-gravity-flow-step-pdf.php:29
+#: includes/class-gravity-flow-step-pdf.php:63
 msgid "Error: Unable to generate PDF. %s"
 msgstr "Fehler: Kann PDF nicht erstellen. %s"
 
-#: includes/class-gravity-flow-step-pdf.php:35
+#: includes/class-gravity-flow-step-pdf.php:69
 msgid "PDF Generated"
 msgstr "PDF erstellt"
 
-#: includes/class-gravity-flow-step-pdf.php:119
+#: includes/class-gravity-flow-step-pdf.php:153
 msgid "Sent Notification: "
 msgstr "Gesendete Mitteilung:"
 

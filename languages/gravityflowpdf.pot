@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-03-02 20:34:10+00:00\n"
+"POT-Creation-Date: 2019-05-12 11:01:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,7 +36,7 @@ msgid "Manage Form Settings"
 msgstr ""
 
 #: class-gravity-flow-pdf.php:110 class-gravity-flow-pdf.php:114
-#: class-gravity-flow-pdf.php:698
+#: class-gravity-flow-pdf.php:715
 msgid "Name"
 msgstr ""
 
@@ -44,7 +44,7 @@ msgstr ""
 msgid "Enter a name to uniquely identify this pdf."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:118 class-gravity-flow-pdf.php:699
+#: class-gravity-flow-pdf.php:118 class-gravity-flow-pdf.php:716
 msgid "Description"
 msgstr ""
 
@@ -169,27 +169,35 @@ msgstr ""
 msgid "Entry not found."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:397
+#: class-gravity-flow-pdf.php:399
+msgid "Expired."
+msgstr ""
+
+#: class-gravity-flow-pdf.php:406
+msgid "Invalid signature."
+msgstr ""
+
+#: class-gravity-flow-pdf.php:413
 msgid "Unauthorized."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:402
+#: class-gravity-flow-pdf.php:418
 msgid "You don't have access to this PDF."
 msgstr ""
 
-#: class-gravity-flow-pdf.php:705 class-gravity-flow-pdf.php:711
+#: class-gravity-flow-pdf.php:722 class-gravity-flow-pdf.php:728
 msgid "PDF Templates"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:711
+#: class-gravity-flow-pdf.php:728
 msgid "Add New"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:715
+#: class-gravity-flow-pdf.php:732
 msgid "PDF Template Settings"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:719
+#: class-gravity-flow-pdf.php:736
 msgid "You don't have any PDF templates configured."
 msgstr ""
 
@@ -207,6 +215,10 @@ msgstr ""
 
 #: includes/class-gravity-flow-step-pdf.php:153
 msgid "Sent Notification: "
+msgstr ""
+
+#: includes/class-merge-tag-pdf.php:69
+msgid "Download PDF"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
