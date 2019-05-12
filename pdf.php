@@ -3,7 +3,7 @@
 Plugin Name: Gravity Flow PDF Generator Extension
 Plugin URI: https://gravityflow.io
 Description: PDF Generator Extension for Gravity Flow.
-Version: 1.2
+Version: 1.3.1-dev
 Author: Gravity Flow
 Author URI: https://gravityflow.io
 License: GPL-2.0+
@@ -25,7 +25,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define( 'GRAVITY_FLOW_PDF_VERSION', '1.2' );
+define( 'GRAVITY_FLOW_PDF_VERSION', '1.3.1-dev' );
 define( 'GRAVITY_FLOW_PDF_EDD_ITEM_ID', 3373 );
 define( 'GRAVITY_FLOW_PDF_EDD_ITEM_NAME', 'PDF Generator' );
 
@@ -40,6 +40,8 @@ class Gravity_Flow_PDF_Bootstrap {
 		Gravity_Flow_Steps::register( new Gravity_Flow_Step_PDF() );
 
 		require_once( 'class-gravity-flow-pdf.php' );
+
+		require_once( 'includes/class-merge-tag-pdf.php' );
 
 		// Registers the class name with GFAddOn.
 		GFAddOn::register( 'Gravity_Flow_PDF' );

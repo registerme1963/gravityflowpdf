@@ -400,16 +400,33 @@ if ( class_exists( 'GFForms' ) ) {
 				wp_die( $message, $message, 404 );
 			}
 
-			$assignee_key = gravity_flow()->get_current_user_assignee_key();
+			if ( isset( $_REQUEST['signature'] ) ) {
+				$signature = sanitize_text_field( $_REQUEST['signature'] );
+				$expires = absint( $_REQUEST['expires'] );
 
-			if ( ! $assignee_key ) {
-				$message = esc_html__( 'Unauthorized.', 'gravityflowpdf' );
-				wp_die( $message, $message, 401 );
-			}
+				if ( time() > $expires ) {
+					$message = esc_html__( 'Expired.', 'gravityflowpdf' );
+					wp_die( $message, $message, 401 );
+				}
 
-			if ( ! $this->is_download_authorized( $entry ) ) {
-				$message = esc_html__( "You don't have access to this PDF.", 'gravityflowpdf' );
-				wp_die( $message, $message, 403 );
+				$query_args = remove_query_arg( array( 'signature', 'expires' ) );
+				$generated_signature = $this->generate_signature( untrailingslashit( home_url() ) . $query_args, $expires );
+				if ( ! hash_equals( $generated_signature, $signature ) ) {
+					$message = esc_html__( 'Invalid signature.', 'gravityflowpdf' );
+					wp_die( $message, $message, 401 );
+				}
+			} else {
+				$assignee_key = gravity_flow()->get_current_user_assignee_key();
+
+				if ( ! $assignee_key ) {
+					$message = esc_html__( 'Unauthorized.', 'gravityflowpdf' );
+					wp_die( $message, $message, 401 );
+				}
+
+				if ( ! $this->is_download_authorized( $entry ) ) {
+					$message = esc_html__( "You don't have access to this PDF.", 'gravityflowpdf' );
+					wp_die( $message, $message, 403 );
+				}
 			}
 
 			$form_id = $entry['form_id'];
@@ -726,6 +743,35 @@ deny from all';
 
 		public function feed_list_no_item_message() {
 			return esc_html__( "You don't have any PDF templates configured.", 'gravityflowpdf' );
+		}
+
+		/**
+		 *
+		 * Generates a signature for the given download URL and expiration.
+		 *
+		 * @since 1.3
+		 *
+		 * @param $url
+		 * @param $expiration
+		 *
+		 * @return false|string
+		 */
+		public function generate_signature( $url, $expiration ) {
+			$secret_key = get_option( 'gravityflowpdf_signed_secret_token', '' );
+
+			if ( empty( $secret_key ) ) {
+				$secret_key = wp_generate_password( 64 );
+				update_option( 'gravityflowpdf_signed_secret_token', $secret_key );
+			}
+
+			$token_data = array(
+				'expires' => $expiration,
+				'url'     => (string) $url,
+			);
+
+			$token = rawurlencode( base64_encode( json_encode( $token_data ) ) );
+
+			return hash_hmac( 'sha256', $token, $secret_key );
 		}
 	}
 }

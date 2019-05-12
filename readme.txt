@@ -2,7 +2,7 @@
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
 Requires at least: 4.0
-Tested up to: 5.1
+Tested up to: 5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 
 == ChangeLog ==
+
+= 1.3 =
+- Added the {workflow_pdf_download_link} and {workflow_pdf_download_url} merge tags.
 
 = 1.2 =
 - Added support for the license key constant GRAVITY_FLOW_PDF_LICENSE_KEY.

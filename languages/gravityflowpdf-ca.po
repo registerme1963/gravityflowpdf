@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-02-23 09:11:47+00:00\n"
+"POT-Creation-Date: 2019-03-02 20:34:10+00:00\n"
 "PO-Revision-Date: 2016-11-16 18:40+0000\n"
 "Last-Translator: Xavi Ivars <xavi.ivars@gmail.com>, 2018\n"
 "Language-Team: Catalan (https://www.transifex.com/gravityflow/teams/50678/ca/)\n"
@@ -26,48 +26,48 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
-#: class-gravity-flow-pdf.php:71
+#: class-gravity-flow-pdf.php:96
 msgid "Manage Settings"
 msgstr "Gestiona els paràmetres"
 
-#: class-gravity-flow-pdf.php:72
+#: class-gravity-flow-pdf.php:97
 msgid "Uninstall"
 msgstr "Desinstal·la"
 
-#: class-gravity-flow-pdf.php:73
+#: class-gravity-flow-pdf.php:98
 msgid "Manage Form Settings"
 msgstr "Gestiona els paràmetres del formulari"
 
-#: class-gravity-flow-pdf.php:85 class-gravity-flow-pdf.php:89
-#: class-gravity-flow-pdf.php:630
+#: class-gravity-flow-pdf.php:110 class-gravity-flow-pdf.php:114
+#: class-gravity-flow-pdf.php:698
 msgid "Name"
 msgstr "Nom"
 
-#: class-gravity-flow-pdf.php:89
+#: class-gravity-flow-pdf.php:114
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Introduïu un nom per a identificar unívocament aquest PDF."
 
-#: class-gravity-flow-pdf.php:93 class-gravity-flow-pdf.php:631
+#: class-gravity-flow-pdf.php:118 class-gravity-flow-pdf.php:699
 msgid "Description"
 msgstr "Descripció"
 
-#: class-gravity-flow-pdf.php:99
+#: class-gravity-flow-pdf.php:124
 msgid "Event"
 msgstr "Esdeveniment"
 
-#: class-gravity-flow-pdf.php:103
+#: class-gravity-flow-pdf.php:128
 msgid "Workflow Complete"
 msgstr "Flux de treball complet"
 
-#: class-gravity-flow-pdf.php:107
+#: class-gravity-flow-pdf.php:132
 msgid "Workflow Step Complete: Approval"
 msgstr "Pas del flux complet: Aprovació"
 
-#: class-gravity-flow-pdf.php:111
+#: class-gravity-flow-pdf.php:136
 msgid "Workflow Step Complete: User Input"
 msgstr "Pas del flux complet: Entrada d'usuari"
 
-#: class-gravity-flow-pdf.php:118
+#: class-gravity-flow-pdf.php:143
 msgid ""
 "Build the conditional logic that should be applied to this feed before it's "
 "allowed to be processed. If an entry does not meet the conditions of this "
@@ -77,23 +77,23 @@ msgstr ""
 "que es processi. Si una entrada no compleix les condicions d'aquest pas, "
 "caurà al pas següent de la llista."
 
-#: class-gravity-flow-pdf.php:121
+#: class-gravity-flow-pdf.php:146
 msgid "Enable Condition"
 msgstr "Activa la condició"
 
-#: class-gravity-flow-pdf.php:122
+#: class-gravity-flow-pdf.php:147
 msgid "Use this PDF if"
 msgstr "Utilitza aquest PDF si"
 
-#: class-gravity-flow-pdf.php:131
+#: class-gravity-flow-pdf.php:156
 msgid "Template"
 msgstr "Plantilla"
 
-#: class-gravity-flow-pdf.php:142 class-gravity-flow-pdf.php:232
+#: class-gravity-flow-pdf.php:167 class-gravity-flow-pdf.php:257
 msgid "Disable auto-formatting"
 msgstr "Desactiva el format automàtic"
 
-#: class-gravity-flow-pdf.php:145
+#: class-gravity-flow-pdf.php:170
 msgid ""
 "Disable auto-formatting to prevent paragraph breaks being automatically "
 "inserted when using HTML to create the PDF template."
@@ -102,15 +102,15 @@ msgstr ""
 "s'insereixin automàticament en utilitzar un HTML per a crear una plantilla "
 "PDF."
 
-#: class-gravity-flow-pdf.php:151
+#: class-gravity-flow-pdf.php:176
 msgid "Send by email"
 msgstr "Envia per correu"
 
-#: class-gravity-flow-pdf.php:155
+#: class-gravity-flow-pdf.php:180
 msgid "Enabled"
 msgstr "Activada"
 
-#: class-gravity-flow-pdf.php:158
+#: class-gravity-flow-pdf.php:183
 msgid ""
 "Enable this setting to send the PDF by email as an attachment. The PDF will "
 "be deleted automatically from the server."
@@ -118,55 +118,55 @@ msgstr ""
 "Activeu aquest paràmetre per a enviar el PDF per correu electrònic. El PDF "
 "s'eliminarà automàticament del servidor."
 
-#: class-gravity-flow-pdf.php:165
+#: class-gravity-flow-pdf.php:190
 msgid "Send To"
 msgstr "Envia a"
 
-#: class-gravity-flow-pdf.php:170
+#: class-gravity-flow-pdf.php:195
 msgid "Select Users"
 msgstr "Seleccioneu usuaris"
 
-#: class-gravity-flow-pdf.php:171
+#: class-gravity-flow-pdf.php:196
 msgid "Configure Routing"
 msgstr "Configura l'encaminament"
 
-#: class-gravity-flow-pdf.php:177
+#: class-gravity-flow-pdf.php:202
 msgid "Select User"
 msgstr "Seleccioneu un usuari"
 
-#: class-gravity-flow-pdf.php:185
+#: class-gravity-flow-pdf.php:210
 msgid "Routing"
 msgstr "Encaminament"
 
-#: class-gravity-flow-pdf.php:191
+#: class-gravity-flow-pdf.php:216
 msgid "From Name"
 msgstr "Nom del remitent"
 
-#: class-gravity-flow-pdf.php:197
+#: class-gravity-flow-pdf.php:222
 msgid "From Email"
 msgstr "Adreça electrònica del remitent"
 
-#: class-gravity-flow-pdf.php:204
+#: class-gravity-flow-pdf.php:229
 msgid "Reply To"
 msgstr "Respon a:"
 
-#: class-gravity-flow-pdf.php:210
+#: class-gravity-flow-pdf.php:235
 msgid "BCC"
 msgstr "CCO"
 
-#: class-gravity-flow-pdf.php:216
+#: class-gravity-flow-pdf.php:241
 msgid "Subject"
 msgstr "Assumpte"
 
-#: class-gravity-flow-pdf.php:221
+#: class-gravity-flow-pdf.php:246
 msgid "Message"
 msgstr "Missatge"
 
-#: class-gravity-flow-pdf.php:224
+#: class-gravity-flow-pdf.php:249
 msgid "The PDF for entry {entry_id} is attached."
 msgstr "S'ha adjuntat el PDF amb entrada {entry_id}"
 
-#: class-gravity-flow-pdf.php:235
+#: class-gravity-flow-pdf.php:260
 msgid ""
 "Disable auto-formatting to prevent paragraph breaks being automatically "
 "inserted when using HTML to create the email message."
@@ -174,35 +174,35 @@ msgstr ""
 "Desactiveu el format automàtic per a previndre la introducció automàtica de "
 "salts de paràgraf quan utilitzeu HTML per a crear el cos del missatge."
 
-#: class-gravity-flow-pdf.php:306
+#: class-gravity-flow-pdf.php:331
 msgid "Type to search"
 msgstr ""
 
-#: class-gravity-flow-pdf.php:365
+#: class-gravity-flow-pdf.php:390
 msgid "Entry not found."
 msgstr "No s'ha trobat l'entrada."
 
-#: class-gravity-flow-pdf.php:372
+#: class-gravity-flow-pdf.php:397
 msgid "Unauthorized."
 msgstr "No autoritzat"
 
-#: class-gravity-flow-pdf.php:377
+#: class-gravity-flow-pdf.php:402
 msgid "You don't have access to this PDF."
 msgstr "No teniu accés per accedir a aquest PDF."
 
-#: class-gravity-flow-pdf.php:637 class-gravity-flow-pdf.php:643
+#: class-gravity-flow-pdf.php:705 class-gravity-flow-pdf.php:711
 msgid "PDF Templates"
 msgstr "Plantilles PDF"
 
-#: class-gravity-flow-pdf.php:643
+#: class-gravity-flow-pdf.php:711
 msgid "Add New"
 msgstr "Afegeix"
 
-#: class-gravity-flow-pdf.php:647
+#: class-gravity-flow-pdf.php:715
 msgid "PDF Template Settings"
 msgstr "Paràmetres de les plantilles PDF"
 
-#: class-gravity-flow-pdf.php:651
+#: class-gravity-flow-pdf.php:719
 msgid "You don't have any PDF templates configured."
 msgstr "No heu configurat cap plantilla PDF."
 
@@ -210,15 +210,15 @@ msgstr "No heu configurat cap plantilla PDF."
 msgid "PDF"
 msgstr "PDF"
 
-#: includes/class-gravity-flow-step-pdf.php:29
+#: includes/class-gravity-flow-step-pdf.php:63
 msgid "Error: Unable to generate PDF. %s"
 msgstr "Error: No s'ha pogut generar el PDF. %s"
 
-#: includes/class-gravity-flow-step-pdf.php:35
+#: includes/class-gravity-flow-step-pdf.php:69
 msgid "PDF Generated"
 msgstr "S'ha generat el PDF"
 
-#: includes/class-gravity-flow-step-pdf.php:119
+#: includes/class-gravity-flow-step-pdf.php:153
 msgid "Sent Notification: "
 msgstr "Notificació enviada:"
 
