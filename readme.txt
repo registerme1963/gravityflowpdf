@@ -44,6 +44,9 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.3 =
+- Added the {workflow_pdf_download_link} and {workflow_pdf_download_url} merge tags.
+
 = 1.2 =
 - Added support for the license key constant GRAVITY_FLOW_PDF_LICENSE_KEY.
 - Fixed an issue where pdf filename did not pass through the gravityflowpdf_file_name filter before creation.
