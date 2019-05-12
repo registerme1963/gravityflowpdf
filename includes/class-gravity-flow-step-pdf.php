@@ -154,7 +154,29 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			$this->add_note( $note, 0, $this->get_type() );
 
 			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $this->get_form_id() );
-			@unlink( $file_path );
+
+			$delete_pdf = true;
+			$form       = $this->get_form();
+			$entry      = $this->get_entry();
+
+			/**
+			 * Allows the PDF to be retained on the server after sending by email.
+			 *
+			 * Care should be taken to ensure that the workflow doesn't allow subsequent assignees to access the PDF with sensitive data.
+			 *
+			 * @since 1.3
+			 *
+			 * @param bool $delete_pdf Whether to delete the PDF after sending by email.
+			 *
+			 * @param array $form The form array
+			 * @param array $entry The entry array
+			 * @param Gravity_Flow_Step_PDF This PDF step
+			 */
+			$delete_pdf = apply_filters( 'gravityflowpdf_delete_post_send', $delete_pdf, $form, $entry, $this );
+
+			if ( $delete_pdf ) {
+				@unlink( $file_path );
+			}
 		}
 
 		public function send_notification( $notification ) {

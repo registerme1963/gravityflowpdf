@@ -41,6 +41,8 @@ class Gravity_Flow_PDF_Bootstrap {
 
 		require_once( 'class-gravity-flow-pdf.php' );
 
+		require_once( 'includes/class-merge-tag-pdf.php' );
+
 		// Registers the class name with GFAddOn.
 		GFAddOn::register( 'Gravity_Flow_PDF' );
 
