@@ -148,7 +148,17 @@ if ( class_exists( 'GFForms' ) ) {
 					),
 				),
 			);
-			$settings        = array(
+
+			$description = '';
+			if ( method_exists( 'Gravity_Flow_Common', 'get_total_accounts' ) ) {
+				$total_accounts = Gravity_Flow_Common::get_total_accounts();
+				$args           = Gravity_Flow_Common::get_users_args();
+				$number         = ( isset( $args['number'] ) && $args['number'] > 0 ) ? $args['number'] : 2000;
+				/* translators: 1: Warning icon 2: Number of users displayed 3: Open link tag 4: Close link tag */
+				$description = ( $total_accounts > $number ) ? '<span class="gf_settings_description">' . sprintf( esc_html__( '%1$s The list of users contains only the first %2$s users in your site. %3$sLearn how to remove this limit%4$s. ', 'gravityflow' ), '<i class="dashicons dashicons-warning" style="color:red;"></i> ', $number, '<a href="https://docs.gravityflow.io/article/54-gravityflowgetusersargs" target="_blank">', '</a>' ) . '</span>' : '';
+			}
+
+			$settings = array(
 				'title'  => 'PDF',
 				'fields' => array(
 					array(
@@ -197,18 +207,20 @@ if ( class_exists( 'GFForms' ) ) {
 						),
 					),
 					array(
-						'id'       => 'workflow_notification_users',
-						'name'     => 'workflow_notification_users[]',
-						'label'    => __( 'Select User', 'gravityflowpdf' ),
-						'size'     => '8',
-						'multiple' => 'multiple',
-						'type'     => 'select',
-						'choices'  => $account_choices,
+						'id'          => 'workflow_notification_users',
+						'name'        => 'workflow_notification_users[]',
+						'label'       => __( 'Select User', 'gravityflowpdf' ),
+						'size'        => '8',
+						'multiple'    => 'multiple',
+						'type'        => 'select',
+						'choices'     => $account_choices,
+						'description' => $description,
 					),
 					array(
-						'name'  => 'workflow_notification_routing',
-						'label' => __( 'Routing', 'gravityflowpdf' ),
-						'type'  => 'user_routing',
+						'name'        => 'workflow_notification_routing',
+						'label'       => __( 'Routing', 'gravityflowpdf' ),
+						'type'        => 'user_routing',
+						'description' => $description,
 					),
 					array(
 						'name'  => 'workflow_notification_from_name',
@@ -549,7 +561,7 @@ if ( class_exists( 'GFForms' ) ) {
 		 * Returns the path to the tmp directory to be used by mPDF.
 		 *
 		 * @since 1.1.3
-		 * 
+		 *
 		 * @return string
 		 */
 		public function get_tmp_path() {
