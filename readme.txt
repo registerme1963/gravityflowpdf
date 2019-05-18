@@ -44,6 +44,9 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.3.1 =
+- Added support for displaying the first 2,000 users in notification users fields.
+
 = 1.3 =
 - Added the {workflow_pdf_download_link} and {workflow_pdf_download_url} merge tags.
 - Updated translations.

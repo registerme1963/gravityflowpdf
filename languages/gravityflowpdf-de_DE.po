@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowpdf\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-03-02 20:34:10+00:00\n"
+"POT-Creation-Date: 2019-05-12 11:01:54+00:00\n"
 "PO-Revision-Date: 2016-11-16 18:40+0000\n"
 "Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
 "Language-Team: German (Germany) (https://www.transifex.com/gravityflow/teams/50678/de_DE/)\n"
@@ -38,7 +38,7 @@ msgid "Manage Form Settings"
 msgstr "Formulareinstellungen verwalten"
 
 #: class-gravity-flow-pdf.php:110 class-gravity-flow-pdf.php:114
-#: class-gravity-flow-pdf.php:698
+#: class-gravity-flow-pdf.php:715
 msgid "Name"
 msgstr "Name"
 
@@ -46,7 +46,7 @@ msgstr "Name"
 msgid "Enter a name to uniquely identify this pdf."
 msgstr "Gib einen Namen ein, der dieses PDF eindeutig identifiziert."
 
-#: class-gravity-flow-pdf.php:118 class-gravity-flow-pdf.php:699
+#: class-gravity-flow-pdf.php:118 class-gravity-flow-pdf.php:716
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -182,27 +182,35 @@ msgstr "Tippen, um zu suchen"
 msgid "Entry not found."
 msgstr "Eintrag nicht gefunden."
 
-#: class-gravity-flow-pdf.php:397
+#: class-gravity-flow-pdf.php:399
+msgid "Expired."
+msgstr ""
+
+#: class-gravity-flow-pdf.php:406
+msgid "Invalid signature."
+msgstr ""
+
+#: class-gravity-flow-pdf.php:413
 msgid "Unauthorized."
 msgstr "Nicht autorisiert."
 
-#: class-gravity-flow-pdf.php:402
+#: class-gravity-flow-pdf.php:418
 msgid "You don't have access to this PDF."
 msgstr "Du hast keinen Zugriff auf dieses PDF."
 
-#: class-gravity-flow-pdf.php:705 class-gravity-flow-pdf.php:711
+#: class-gravity-flow-pdf.php:722 class-gravity-flow-pdf.php:728
 msgid "PDF Templates"
 msgstr "PDF-Vorlagen"
 
-#: class-gravity-flow-pdf.php:711
+#: class-gravity-flow-pdf.php:728
 msgid "Add New"
 msgstr "Neu hinzufügen"
 
-#: class-gravity-flow-pdf.php:715
+#: class-gravity-flow-pdf.php:732
 msgid "PDF Template Settings"
 msgstr "PDF-Vorlagen-Einstellungen"
 
-#: class-gravity-flow-pdf.php:719
+#: class-gravity-flow-pdf.php:736
 msgid "You don't have any PDF templates configured."
 msgstr "Du hast keine PDF-Vorlagen konfiguriert."
 
@@ -221,6 +229,10 @@ msgstr "PDF erstellt"
 #: includes/class-gravity-flow-step-pdf.php:153
 msgid "Sent Notification: "
 msgstr "Gesendete Mitteilung:"
+
+#: includes/class-merge-tag-pdf.php:69
+msgid "Download PDF"
+msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "Gravity Flow PDF Generator Extension"
