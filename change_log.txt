@@ -1,1 +1,1 @@
-
+- Added support for displaying the first 2,000 users in notification users fields.
