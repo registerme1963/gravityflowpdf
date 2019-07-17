@@ -517,7 +517,7 @@ if ( class_exists( 'GFForms' ) ) {
 		 * @return string
 		 * @throws \Mpdf\MpdfException
 		 */
-		public function generate_pdf( $body, $file_path ) {
+		public function generate_pdf( $body, $file_path, $entry = false, $step = false ) {
 			if ( ! class_exists( '\Mpdf\Mpdf' ) ) {
 				require_once( 'vendor/autoload.php' );
 			}
@@ -533,10 +533,15 @@ if ( class_exists( 'GFForms' ) ) {
 			 * Allow the mPDF initialization properties to be overridden.
 			 *
 			 * @since 1.1.3
+			 * @since 1.3.2 Added the $entry and $step arguments
 			 *
-			 * @param array $mpdf_config The mPDF initialization properties. See https://mpdf.github.io/reference/mpdf-variables/overview.html
+			 * @param array                  $mpdf_config The mPDF initialization properties. See https://mpdf.github.io/reference/mpdf-variables/overview.html
+			 * @param bool|array             $entry The current entry.
+			 * @param bool|Gravity_Flow_Step $step The current step.
+			 *
+			 * @return array
 			 */
-			$mpdf_config = apply_filters( 'gravityflowpdf_mpdf_config', $mpdf_config );
+			$mpdf_config = apply_filters( 'gravityflowpdf_mpdf_config', $mpdf_config, $entry, $step );
 
 			$mpdf = new \Mpdf\Mpdf( $mpdf_config );
 
@@ -546,9 +551,36 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$mpdf->SetCreator( 'Gravity Flow v' . GRAVITY_FLOW_VERSION . '. https://gravityflow.io' );
 
-			$body = apply_filters( 'gravityflowpdf_content', $body, $file_path );
+			/**
+			 * Allow the content for PDF creation to be overridden.
+			 *
+			 * @since unknown
+			 * @since 1.3.2   Added the $entry and $step parameters
+			 *
+			 * @param string                 $body      The markup for PDF as defined through step settings.
+			 * @param string                 $file_path The path that PDF will be saved to.
+			 * @param bool|array             $entry     The current entry.
+			 * @param bool|Gravity_Flow_Step $step      The current step.
+			 *
+			 * @return string
+			 */
+			$body = apply_filters( 'gravityflowpdf_content', $body, $file_path, $entry, $step );
 
-			$mpdf = apply_filters( 'gravityflowpdf_mpdf', $mpdf, $body, $file_path );
+			/**
+			 * Allow the content for PDF creation to be overridden.
+			 *
+			 * @since unknown
+			 * @since 1.3.2   Added the $entry and $step parameters
+			 *
+			 * @param Mpdf\Mpdf              $mpdf      The mpdf instance - See https://mpdf.github.io/reference/mpdf-variables/overview.html
+			 * @param string                 $body      The markup for PDF as defined through step settings.
+			 * @param string                 $file_path The path that PDF will be saved to.
+			 * @param bool|array             $entry     The current entry.
+			 * @param bool|Gravity_Flow_Step $step      The current step.
+			 *
+			 * @return Mpdf\Mpdf
+			 */
+			$mpdf = apply_filters( 'gravityflowpdf_mpdf', $mpdf, $body, $file_path, $entry, $step );
 
 			$mpdf->WriteHTML( $body );
 

@@ -1,1 +1,1 @@
-
+- Added parameters ($entry and $step) to filters gravityflowpdf_mpdf_config and gravityflowpdf_content to enable more granular customization options.
