@@ -511,8 +511,10 @@ if ( class_exists( 'GFForms' ) ) {
 		}
 
 		/**
-		 * @param string $body The PDF content.
-		 * @param string $file_path The PDF path.
+		 * @param string                 $body      The PDF content.
+		 * @param string                 $file_path The PDF path.
+		 * @param bool|array             $entry     The current entry.
+		 * @param bool|Gravity_Flow_Step $step      The current step.
 		 *
 		 * @return string
 		 * @throws \Mpdf\MpdfException
@@ -536,8 +538,8 @@ if ( class_exists( 'GFForms' ) ) {
 			 * @since 1.3.2 Added the $entry and $step arguments
 			 *
 			 * @param array                  $mpdf_config The mPDF initialization properties. See https://mpdf.github.io/reference/mpdf-variables/overview.html
-			 * @param bool|array             $entry The current entry.
-			 * @param bool|Gravity_Flow_Step $step The current step.
+			 * @param bool|array             $entry       The current entry.
+			 * @param bool|Gravity_Flow_Step $step        The current step.
 			 *
 			 * @return array
 			 */
