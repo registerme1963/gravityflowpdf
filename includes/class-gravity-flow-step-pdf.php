@@ -101,7 +101,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $form['id'] );
 
-			gravity_flow_pdf()->generate_pdf( $body, $file_path );
+			gravity_flow_pdf()->generate_pdf( $body, $file_path, $entry, $this );
 		}
 
 		public function send_email() {
