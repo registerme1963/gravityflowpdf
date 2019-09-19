@@ -143,6 +143,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			$notification['fromName']                   = $this->workflow_notification_from_name;
 			$notification['from']                       = $this->workflow_notification_from_email;
 			$notification['replyTo']                    = $this->workflow_notification_reply_to;
+			$notification['cc']                         = $this->workflow_notification_cc;
 			$notification['bcc']                        = $this->workflow_notification_bcc;
 			$notification['subject']                    = $this->workflow_notification_subject;
 			$notification['message']                    = $this->workflow_notification_message;

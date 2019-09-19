@@ -242,6 +242,12 @@ if ( class_exists( 'GFForms' ) ) {
 						'type'  => 'text',
 					),
 					array(
+						'name'  => 'workflow_notification_cc',
+						'class' => 'fieldwidth-2 merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
+						'label' => __( 'CC', 'gravityflowpdf' ),
+						'type'  => 'text',
+					),
+					array(
 						'name'  => 'workflow_notification_bcc',
 						'class' => 'fieldwidth-2 merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
 						'label' => __( 'BCC', 'gravityflowpdf' ),
