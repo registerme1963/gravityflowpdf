@@ -246,6 +246,7 @@ if ( class_exists( 'GFForms' ) ) {
 						'class' => 'fieldwidth-2 merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
 						'label' => __( 'CC', 'gravityflowpdf' ),
 						'type'  => 'text',
+						'tooltip'  => '<h6>' . __( 'Name', 'gravityflow' ) . '</h6>' . __( 'Be aware of any privacy policies your website is subject to that would apply to using the CC field. For example, GDPR indicates names and emails are private that should not be exposed.', 'gravityflow' ),
 					),
 					array(
 						'name'  => 'workflow_notification_bcc',
@@ -572,6 +573,9 @@ if ( class_exists( 'GFForms' ) ) {
 			 *
 			 * @return string
 			 */
+			//error_log( "START GENERATE ----------------------------------------------------------");
+			//error_log( $body );
+			//error_log( "END GENERATE ----------------------------------------------------------");
 			$body = apply_filters( 'gravityflowpdf_content', $body, $file_path, $entry, $step );
 
 			/**
@@ -592,6 +596,7 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$mpdf->WriteHTML( $body );
 
+			error_log('File Path: ' . $file_path );
 			$mpdf->Output( $file_path );
 
 			return $file_path;
