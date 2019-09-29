@@ -573,9 +573,6 @@ if ( class_exists( 'GFForms' ) ) {
 			 *
 			 * @return string
 			 */
-			//error_log( "START GENERATE ----------------------------------------------------------");
-			//error_log( $body );
-			//error_log( "END GENERATE ----------------------------------------------------------");
 			$body = apply_filters( 'gravityflowpdf_content', $body, $file_path, $entry, $step );
 
 			/**
@@ -596,7 +593,6 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$mpdf->WriteHTML( $body );
 
-			error_log('File Path: ' . $file_path );
 			$mpdf->Output( $file_path );
 
 			return $file_path;
