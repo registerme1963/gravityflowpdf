@@ -44,6 +44,11 @@ The Gravity Flow PDF Generator Extension will work with any license of [Gravity 
 
 == ChangeLog ==
 
+= 1.3.2 =
+- Added parameters ($entry and $step) to filters gravityflowpdf_mpdf_config and gravityflowpdf_content to enable more granular customization options.
+- Added step setting for notifications to identify CC: recipients
+
+
 = 1.3.1 =
 - Added support for displaying the first 2,000 users in notification users fields.
 
