@@ -100,6 +100,28 @@ if ( class_exists( 'GFForms' ) ) {
 			return $caps;
 		}
 
+		/**
+		 * Add the form settings tab.
+		 *
+		 * @since 1.3.4
+		 *
+		 * @param array $tabs    The form settings.
+		 * @param int   $form_id The form ID.
+		 *
+		 * @return array
+		 */
+		public function add_form_settings_menu( $tabs, $form_id ) {
+
+			$tabs[] = array(
+				'name'         => $this->_slug,
+				'label'        => gravity_flow()->translate_navigation_label( 'workflow' ) . ' PDF',
+				'query'        => array( 'fid' => null ),
+				'capabilities' => $this->_capabilities_form_settings,
+			);
+
+			return $tabs;
+		}
+
 		public function feed_settings_fields() {
 			$account_choices = gravity_flow()->get_users_as_choices();
 			$feed_settings   = array(
