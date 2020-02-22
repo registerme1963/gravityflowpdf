@@ -314,7 +314,7 @@ if ( class_exists( 'GFForms' ) ) {
 			$form           = GFAPI::get_form( $form_id );
 			$routing_fields = ! empty( $form ) ? GFCommon::get_field_filter_settings( $form ) : array();
 			$input_fields   = array();
-			if ( is_array( $form['fields'] ) ) {
+			if ( is_array( rgar( $form, 'fields' ) ) ) {
 				foreach ( $form['fields'] as $field ) {
 					/* @var GF_Field $field */
 					$input_fields[] = array( 'key'  => absint( $field->id ),
