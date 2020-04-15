@@ -184,6 +184,14 @@ if ( class_exists( 'GFForms' ) ) {
 				'title'  => 'PDF',
 				'fields' => array(
 					array(
+						'name'     => 'file_name',
+						'label'    => __( 'PDF Name', 'gravityflowpdf' ),
+						'type'     => 'text',
+						'class'    => 'medium merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
+						'required' => false,
+						'tooltip'  => '<h6>' . __( 'PDF Name', 'gravityflowpdf' ) . '</h6>' . __( 'Enter a name to uniquely identify this pdf. Leave empty for default file name.', 'gravityflowpdf' ),
+					),					
+					array(
 						'name'          => 'template',
 						'label'         => esc_html__( 'Template', 'gravityflowpdf' ),
 						'type'          => 'textarea',
@@ -637,7 +645,7 @@ if ( class_exists( 'GFForms' ) ) {
 			return $path;
 		}
 
-		function get_destination_folder() {
+		public function get_destination_folder() {
 			$upload_dir = wp_upload_dir();
 			$path       = $upload_dir['basedir'] . DIRECTORY_SEPARATOR . 'gravityflowpdf' . DIRECTORY_SEPARATOR;
 			if ( ! is_dir( $path ) ) {
