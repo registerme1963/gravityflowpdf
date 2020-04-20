@@ -189,7 +189,7 @@ if ( class_exists( 'GFForms' ) ) {
 						'type'     => 'text',
 						'class'    => 'medium merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
 						'required' => false,
-						'tooltip'  => '<h6>' . __( 'PDF Name', 'gravityflowpdf' ) . '</h6>' . __( 'Enter a name to uniquely identify this pdf. Leave empty for default file name.', 'gravityflowpdf' ),
+						'tooltip'  => '<h6>' . __( 'PDF Name', 'gravityflowpdf' ) . '</h6>' . __( 'Enter a name to uniquely identify this pdf. Leave empty for default file name format (form-##-entry-##.pdf).', 'gravityflowpdf' ),
 					),					
 					array(
 						'name'          => 'template',
