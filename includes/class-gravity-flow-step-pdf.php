@@ -105,10 +105,9 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			else {
 				$file_name = GFCommon::replace_variables( $this->file_name, $this->get_form(), $entry, true, false, false, 'text' );
 				$file_parts = pathinfo( strtolower( $file_name ) );
-				if( $file_parts['extension'] == 'pdf' ) {
+				if ( isset( $file_parts['extension'] ) && 'pdf' === $file_parts['extension'] ) {
 					$file_path = gravity_flow_pdf()->get_destination_folder() . $file_name;
-				}
-				else {
+				} else {
 					$file_path = gravity_flow_pdf()->get_destination_folder() . $file_name . '.pdf';
 				}
 			}
