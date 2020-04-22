@@ -1,3 +1,5 @@
 - Update the form settings label to "Workflow PDF".
 - Updated mPDF to v8.0.4.
 - Fixed PHP notices thrown in PHP 7.4.
+- Added option to set PDF File Name on the Workflow. Empty field takes the current defined default value.
+- Added merge tag support for PDF File Name field.

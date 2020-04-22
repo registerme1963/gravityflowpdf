@@ -99,7 +99,18 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 				$body = do_shortcode( $body );
 			}
 
-			$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $form['id'] );
+			if ( empty( $this->file_name ) ) {
+				$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $form['id'] );
+			}
+			else {
+				$file_name = GFCommon::replace_variables( $this->file_name, $this->get_form(), $entry, true, false, false, 'text' );
+				$file_parts = pathinfo( strtolower( $file_name ) );
+				if ( isset( $file_parts['extension'] ) && 'pdf' === $file_parts['extension'] ) {
+					$file_path = gravity_flow_pdf()->get_destination_folder() . $file_name;
+				} else {
+					$file_path = gravity_flow_pdf()->get_destination_folder() . $file_name . '.pdf';
+				}
+			}
 
 			gravity_flow_pdf()->generate_pdf( $body, $file_path, $entry, $this );
 		}
