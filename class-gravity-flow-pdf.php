@@ -184,12 +184,20 @@ if ( class_exists( 'GFForms' ) ) {
 				'title'  => 'PDF',
 				'fields' => array(
 					array(
-						'name'     => 'file_name',
-						'label'    => __( 'PDF Name', 'gravityflowpdf' ),
-						'type'     => 'text',
-						'class'    => 'medium merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
-						'required' => false,
-						'tooltip'  => '<h6>' . __( 'PDF Name', 'gravityflowpdf' ) . '</h6>' . __( 'Enter a name to uniquely identify this pdf. Leave empty for default file name format (form-##-entry-##.pdf).', 'gravityflowpdf' ),
+						'name'     => 'custom_file_name',
+						'label'    => __( 'Custom File Name', 'gravityflowpdf' ),
+						'type'     => 'checkbox_and_text',
+						'tooltip'  => '<h6>' . __( 'Custom File Name', 'gravityflowpdf' ) . '</h6>' . __( 'Enter a name to uniquely identify this PDF. Default file name format is "form-##-entry-##.pdf".', 'gravityflowpdf' ),
+						'checkbox' => array(
+							'name'          => 'enable_file_name',
+							'label'         => __( 'Enabled', 'gravityflowpdf' ),
+						),
+						'text'     => array(
+							'name'          => 'file_name',
+							'class'         => 'medium merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
+							'placeholder'   => 'form-{form_id}-entry-{entry_id}.pdf',
+							'before'        => '<br />',
+						),						
 					),					
 					array(
 						'name'          => 'template',

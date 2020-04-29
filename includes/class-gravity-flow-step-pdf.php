@@ -99,7 +99,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 				$body = do_shortcode( $body );
 			}
 
-			if ( empty( $this->file_name ) ) {
+			if ( ! $this->enable_file_name || empty( $this->file_name ) ) {
 				$file_path = gravity_flow_pdf()->get_file_path( $this->get_entry_id(), $form['id'] );
 			}
 			else {
