@@ -694,6 +694,17 @@ if ( class_exists( 'GFForms' ) ) {
 		public function get_file_name( $entry_id, $form_id ) {
 			$file_name = 'form-' . $form_id . '-entry-' . $entry_id . '.pdf';
 
+			/**
+			 * Allows changing the default name of the PDF file generated.
+			 *
+			 * @since unknown
+			 *
+			 * @param string                 $file_name The name of PDF as defined through step settings.
+			 * @param int		                 $entry_id	The entry id of the current entry.
+			 * @param int				             $form_id   The form id of the current form.
+			 *
+			 * @return string
+			 */
 			return apply_filters( 'gravityflowpdf_file_name', $file_name, $entry_id, $form_id );
 		}
 

@@ -104,6 +104,20 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			}
 			else {
 				$file_name = GFCommon::replace_variables( $this->file_name, $this->get_form(), $entry, true, false, false, 'text' );
+
+				/**
+				 * Allows changing the custom name of the PDF file generated.
+				 *
+				 * @since unknown
+				 *
+				 * @param string                 $file_name name of PDF as defined through step settings.
+				 * @param int		                 $entry_id	The entry id of the current entry.
+				 * @param int				             $form_id   The form id of the current form.
+				 *
+				 * @return string
+				 */				
+				$file_name = apply_filters( 'gravityflowpdf_file_name', $file_name, $entry_id, $form_id );
+
 				$file_parts = pathinfo( strtolower( $file_name ) );
 				if ( isset( $file_parts['extension'] ) && 'pdf' === $file_parts['extension'] ) {
 					$file_path = gravity_flow_pdf()->get_destination_folder() . $file_name;
