@@ -697,11 +697,11 @@ if ( class_exists( 'GFForms' ) ) {
 			/**
 			 * Allows changing the default name of the PDF file generated.
 			 *
-			 * @since unknown
+			 * @since 1.1
 			 *
-			 * @param string                 $file_name The name of PDF as defined through step settings.
-			 * @param int		                 $entry_id	The entry id of the current entry.
-			 * @param int				             $form_id   The form id of the current form.
+			 * @param string    $file_name  The name of PDF as defined through step settings.
+			 * @param int       $entry_id   The entry id of the current entry.
+			 * @param int       $form_id    The form id of the current form.
 			 *
 			 * @return string
 			 */
