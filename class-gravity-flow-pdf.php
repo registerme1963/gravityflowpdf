@@ -184,12 +184,20 @@ if ( class_exists( 'GFForms' ) ) {
 				'title'  => 'PDF',
 				'fields' => array(
 					array(
-						'name'     => 'file_name',
-						'label'    => __( 'PDF Name', 'gravityflowpdf' ),
-						'type'     => 'text',
-						'class'    => 'medium merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
-						'required' => false,
-						'tooltip'  => '<h6>' . __( 'PDF Name', 'gravityflowpdf' ) . '</h6>' . __( 'Enter a name to uniquely identify this pdf. Leave empty for default file name format (form-##-entry-##.pdf).', 'gravityflowpdf' ),
+						'name'     => 'custom_file_name',
+						'label'    => __( 'Custom File Name', 'gravityflowpdf' ),
+						'type'     => 'checkbox_and_text',
+						'tooltip'  => '<h6>' . __( 'Custom File Name', 'gravityflowpdf' ) . '</h6>' . __( 'Enter a name to uniquely identify this PDF. Default file name format is "form-##-entry-##.pdf".', 'gravityflowpdf' ),
+						'checkbox' => array(
+							'name'          => 'enable_file_name',
+							'label'         => __( 'Enabled', 'gravityflowpdf' ),
+						),
+						'text'     => array(
+							'name'          => 'file_name',
+							'class'         => 'medium merge-tag-support mt-hide_all_fields mt-position-right ui-autocomplete-input',
+							'placeholder'   => 'form-{form_id}-entry-{entry_id}.pdf',
+							'before'        => '<br />',
+						),						
 					),					
 					array(
 						'name'          => 'template',
@@ -686,6 +694,17 @@ if ( class_exists( 'GFForms' ) ) {
 		public function get_file_name( $entry_id, $form_id ) {
 			$file_name = 'form-' . $form_id . '-entry-' . $entry_id . '.pdf';
 
+			/**
+			 * Allows changing the default name of the PDF file generated.
+			 *
+			 * @since 1.1
+			 *
+			 * @param string    $file_name  The name of PDF as defined through step settings.
+			 * @param int       $entry_id   The entry id of the current entry.
+			 * @param int       $form_id    The form id of the current form.
+			 *
+			 * @return string
+			 */
 			return apply_filters( 'gravityflowpdf_file_name', $file_name, $entry_id, $form_id );
 		}
 

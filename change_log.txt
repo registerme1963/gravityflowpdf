@@ -3,3 +3,5 @@
 - Fixed PHP notices thrown in PHP 7.4.
 - Added option to set PDF File Name on the Workflow. Empty field takes the current defined default value.
 - Added merge tag support for PDF File Name field.
+- Added custom file name setting (enable checkbox + text) to allow customization of PDF file name.
+- Added gravityflowpdf_file_name filter call to apply when a custom file name is defined on the workflow step.
